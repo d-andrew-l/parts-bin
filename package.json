@@ -1,0 +1,48 @@
+{
+  "name": "parts-bin",
+  "productName": "Parts Bin",
+  "version": "2.0.0",
+  "description": "Pixel-art hardware inventory for homelabs: track every part, every build, and let the optimizer find upgrades in your spares.",
+  "license": "MIT",
+  "author": "Andrew Lynn",
+  "homepage": "https://github.com/d-andrew-l/parts-bin",
+  "repository": {"type": "git", "url": "https://github.com/d-andrew-l/parts-bin.git"},
+  "bugs": {"url": "https://github.com/d-andrew-l/parts-bin/issues"},
+  "keywords": ["inventory", "homelab", "hardware", "pc-parts", "electron", "pixel-art"],
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "node test/run.mjs",
+    "test:verbose": "node test/run.mjs -v",
+    "dist": "electron-builder --publish never",
+    "dist:win": "electron-builder --win --publish never",
+    "dist:mac": "electron-builder --mac --publish never",
+    "dist:linux": "electron-builder --linux --publish never",
+    "release": "electron-builder --publish always"
+  },
+  "devDependencies": {
+    "electron": "33.2.1",
+    "electron-builder": "^26.15.3"
+  },
+  "dependencies": {
+    "@fontsource/atkinson-hyperlegible": "^5.3.0",
+    "@fontsource/pixelify-sans": "^5.3.0",
+    "electron-updater": "^6.8.9",
+    "jsqr": "^1.4.0",
+    "qrcode": "^1.5.4",
+    "systeminformation": "^5.33.15"
+  },
+  "build": {
+    "appId": "io.github.partsbin",
+    "productName": "Parts Bin",
+    "copyright": "Copyright © 2026 Andrew Lynn and contributors",
+    "directories": {"buildResources": "build", "output": "dist"},
+    "files": ["main.js", "preload.js", "src/**/*", "db/**/*", "samples/**/*", "build/icon.png", "LICENSE", "NOTICE", "!**/*.map"],
+    "asarUnpack": ["node_modules/systeminformation/**/*"],
+    "publish": [{"provider": "github", "owner": "d-andrew-l", "repo": "parts-bin"}],
+    "win": {"target": [{"target": "nsis", "arch": ["x64"]}], "icon": "build/icon.ico"},
+    "nsis": {"oneClick": false, "allowToChangeInstallationDirectory": true, "perMachine": false, "createDesktopShortcut": true, "createStartMenuShortcut": true, "shortcutName": "Parts Bin", "artifactName": "Parts-Bin-Setup-${version}.${ext}"},
+    "mac": {"target": [{"target": "dmg", "arch": ["x64", "arm64"]}], "category": "public.app-category.utilities", "icon": "build/icon.png", "artifactName": "Parts-Bin-${version}-${arch}.${ext}"},
+    "linux": {"target": ["AppImage", "deb"], "category": "Utility", "icon": "build/icon.png", "maintainer": "Andrew Lynn", "artifactName": "Parts-Bin-${version}-${arch}.${ext}"}
+  }
+}

@@ -1,0 +1,43 @@
+# Builds installers for Windows, macOS and Linux and attaches them to a GitHub Release.
+# Trigger: push a tag like v2.0.0 (the version in package.json must match).
+# The installed apps update themselves from these releases (electron-updater reads latest*.yml).
+#
+# Code signing (optional, recommended):
+#   Windows: open-source projects can sign for free through SignPath Foundation (https://signpath.org).
+#            Or set CSC_LINK (base64 .pfx) and CSC_KEY_PASSWORD secrets.
+#   macOS:   set CSC_LINK / CSC_KEY_PASSWORD (Developer ID cert) and APPLE_ID, APPLE_APP_SPECIFIC_PASSWORD,
+#            APPLE_TEAM_ID for notarization. Unsigned builds still work but show a warning on first launch.
+name: Release
+
+on:
+  push:
+    tags: ['v*']
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-latest, macos-latest, ubuntu-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm test
+      - name: Build and publish
+        run: npx electron-builder --publish always
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CSC_LINK: ${{ secrets.CSC_LINK }}
+          CSC_KEY_PASSWORD: ${{ secrets.CSC_KEY_PASSWORD }}
+          APPLE_ID: ${{ secrets.APPLE_ID }}
+          APPLE_APP_SPECIFIC_PASSWORD: ${{ secrets.APPLE_APP_SPECIFIC_PASSWORD }}
+          APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
+          CSC_IDENTITY_AUTO_DISCOVERY: ${{ secrets.CSC_LINK != '' }}

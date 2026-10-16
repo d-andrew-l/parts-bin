@@ -1,0 +1,60 @@
+{
+ "version": 2,
+ "builds": [
+  {"id": "jupiter", "name": "Jupiter", "role": "Gaming desktop", "ip": "192.168.1.20", "os": "Windows 11 Home", "notes": "Sample build. Edit or delete it.",
+   "platform": {"socket": "AM4", "memType": "DDR4", "memForm": "UDIMM", "ramSlots": 4, "maxRamGB": 128, "m2Slots": 2, "sataPorts": 6, "pcieFree": 1, "maxGpuLengthMm": 330}},
+  {"id": "mars", "name": "Mars", "role": "NAS / Jellyfin media server", "ip": "192.168.1.30", "os": "TrueNAS SCALE", "notes": "Sample build. Old office PC turned file server.",
+   "platform": {"socket": "LGA1151 (100/200)", "memType": "DDR4", "memForm": "UDIMM", "ramSlots": 2, "maxRamGB": 32, "m2Slots": 0, "sataPorts": 6, "pcieFree": 1}},
+  {"id": "venus", "name": "Venus", "role": "Living-room HTPC / media player", "ip": "192.168.1.40", "os": "Ubuntu 24.04", "notes": "Sample build. Small form factor, low-profile cards only.",
+   "platform": {"socket": "LGA1151 (100/200)", "memType": "DDR4", "memForm": "UDIMM", "ramSlots": 2, "maxRamGB": 64, "m2Slots": 1, "sataPorts": 2, "pcieFree": 1, "lowProfileOnly": true, "psuW": 240}},
+  {"id": "phobos", "name": "Phobos", "kind": "project", "role": "Garden soil-moisture sensor", "ip": "", "os": "", "notes": "Sample electronics project.", "platform": {}}
+ ],
+ "customBoards": [
+  {"name": "Raspberry Pi 4 Model B 4GB", "type": "SBC", "vendor": "Raspberry Pi", "mcu": "BCM2711", "arch": "ARM64", "cores": 4, "ramGB": 4, "mhz": 1800, "wireless": "Wi-Fi, Bluetooth, Ethernet"}
+ ],
+ "parts": [
+  {"id": "jup-cpu", "type": "CPU", "item": "AMD Ryzen 5 5600X", "use": "jupiter", "verdict": "Keep", "tested": true, "valueLow": 75, "valueHigh": 95, "purchase": {"price": 159, "date": "2022-03-02", "from": "Micro Center"}, "attrs": {}},
+  {"id": "jup-board", "type": "Motherboard", "item": "MSI B550-A PRO", "use": "jupiter", "verdict": "Keep", "tested": true, "specs": "ATX, B550, 4x DDR4, 2x M.2, 6x SATA", "valueLow": 60, "valueHigh": 80, "attrs": {"socket": "AM4", "memType": "DDR4"}},
+  {"id": "jup-ram-a", "type": "RAM", "item": "Corsair Vengeance LPX 8GB DDR4-3200", "model": "CMK16GX4M2E3200C16", "use": "jupiter", "verdict": "Keep", "tested": true, "valueLow": 10, "valueHigh": 15, "attrs": {"memType": "DDR4", "memForm": "UDIMM", "capacityGB": 8, "speed": 3200}},
+  {"id": "jup-ram-b", "type": "RAM", "item": "Corsair Vengeance LPX 8GB DDR4-3200", "model": "CMK16GX4M2E3200C16", "use": "jupiter", "verdict": "Keep", "tested": true, "valueLow": 10, "valueHigh": 15, "attrs": {"memType": "DDR4", "memForm": "UDIMM", "capacityGB": 8, "speed": 3200}},
+  {"id": "jup-gpu", "type": "GPU", "item": "NVIDIA GeForce RTX 3060", "use": "jupiter", "verdict": "Keep", "tested": true, "specs": "12GB, dual fan, 242 mm", "valueLow": 180, "valueHigh": 220, "purchase": {"price": 329, "date": "2022-11-20", "from": "Amazon", "warrantyUntil": "2025-11-20"}, "attrs": {"vramGB": 12, "lengthMm": 242}},
+  {"id": "jup-nvme", "type": "Storage", "item": "Samsung 980 1TB NVMe", "use": "jupiter", "verdict": "Keep", "tested": true, "valueLow": 45, "valueHigh": 60, "attrs": {"kind": "NVMe SSD", "formFactor": "M.2", "capacityGB": 1000, "healthPct": 96, "powerOnHours": 6100}},
+  {"id": "jup-hdd", "type": "Storage", "item": "Seagate BarraCuda 2TB HDD", "use": "jupiter", "verdict": "Keep", "tested": true, "valueLow": 25, "valueHigh": 35, "attrs": {"kind": "HDD", "formFactor": "3.5\"", "capacityGB": 2000, "powerOnHours": 19200}},
+  {"id": "jup-psu", "type": "Power", "item": "Corsair RM650 650W", "use": "jupiter", "verdict": "Keep", "tested": true, "specs": "80 Plus Gold, fully modular", "valueLow": 50, "valueHigh": 70, "attrs": {"watts": 650}},
+  {"id": "jup-cooler", "type": "Cooling", "item": "Thermalright Peerless Assassin 120", "use": "jupiter", "verdict": "Keep", "tested": true, "specs": "Dual-tower air cooler", "valueLow": 25, "valueHigh": 35, "attrs": {"tdpW": 220}},
+
+  {"id": "mars-cpu", "type": "CPU", "item": "Intel Core i3-6100", "use": "mars", "verdict": "Keep", "tested": true, "valueLow": 8, "valueHigh": 12, "attrs": {}},
+  {"id": "mars-ram", "type": "RAM", "item": "Kingston 4GB DDR4-2133", "model": "KVR21N15S8/4", "use": "mars", "verdict": "Keep", "tested": true, "valueLow": 5, "valueHigh": 8, "attrs": {"memType": "DDR4", "memForm": "UDIMM", "capacityGB": 4, "speed": 2133}},
+  {"id": "mars-hdd", "type": "Storage", "item": "WD Red Plus 4TB", "model": "WD40EFZX", "qty": 2, "use": "mars", "verdict": "Keep", "tested": true, "specs": "CMR NAS drives, mirrored", "valueLow": 50, "valueHigh": 65, "purchase": {"price": 89, "date": "2023-06-10", "from": "Newegg", "warrantyUntil": "2026-06-10"}, "attrs": {"kind": "HDD", "formFactor": "3.5\"", "capacityGB": 4000, "powerOnHours": 21000}},
+  {"id": "mars-boot", "type": "Storage", "item": "Kingston A400 120GB SATA SSD", "use": "mars", "verdict": "Keep", "tested": true, "valueLow": 8, "valueHigh": 12, "attrs": {"kind": "SATA SSD", "formFactor": "2.5\"", "capacityGB": 120}},
+  {"id": "mars-sys", "type": "System", "item": "Dell OptiPlex 7040 MT", "use": "mars", "verdict": "Keep", "tested": true, "specs": "Mini tower, 4 drive bays", "valueLow": 40, "valueHigh": 60, "purchase": {"price": 45, "date": "2023-05-28", "from": "eBay"}, "attrs": {}},
+
+  {"id": "ven-sys", "type": "System", "item": "Dell OptiPlex 7050 SFF", "use": "venus", "verdict": "Keep", "tested": true, "specs": "Small form factor, 240 W PSU, low-profile slots", "valueLow": 50, "valueHigh": 75, "attrs": {}},
+  {"id": "ven-cpu", "type": "CPU", "item": "Intel Core i5-7500", "use": "venus", "verdict": "Keep", "tested": true, "valueLow": 15, "valueHigh": 25, "attrs": {}},
+  {"id": "ven-ram", "type": "RAM", "item": "SK Hynix 8GB DDR4-2400", "use": "venus", "verdict": "Keep", "tested": true, "valueLow": 10, "valueHigh": 15, "attrs": {"memType": "DDR4", "memForm": "UDIMM", "capacityGB": 8, "speed": 2400}},
+  {"id": "ven-ssd", "type": "Storage", "item": "Crucial MX500 250GB", "use": "venus", "verdict": "Keep", "tested": true, "valueLow": 15, "valueHigh": 22, "attrs": {"kind": "SATA SSD", "formFactor": "2.5\"", "capacityGB": 250}},
+
+  {"id": "shelf-5700x", "type": "CPU", "item": "AMD Ryzen 7 5700X", "use": "", "bin": "Box 2: CPUs", "verdict": "Keep", "tested": true, "valueLow": 110, "valueHigh": 130, "purchase": {"price": 135, "date": "2024-11-29", "from": "Amazon"}, "notes": "Bought for Jupiter, not installed yet.", "attrs": {}},
+  {"id": "shelf-6700", "type": "CPU", "item": "Intel Core i7-6700", "use": "", "bin": "Box 2: CPUs", "verdict": "Spare", "tested": false, "valueLow": 35, "valueHigh": 50, "purchase": {"price": 25, "date": "2024-02-14", "from": "Local e-waste sale"}, "attrs": {}},
+  {"id": "shelf-2500k", "type": "CPU", "item": "Intel Core i5-2500K", "use": "", "bin": "Box 2: CPUs", "verdict": "Spare", "tested": true, "valueLow": 8, "valueHigh": 15, "notes": "Classic. Nothing here takes LGA1155 anymore.", "attrs": {}},
+  {"id": "shelf-ram-ddr4", "type": "RAM", "item": "Crucial 8GB DDR4-2666", "model": "CT8G4DFS8266", "use": "", "bin": "Box 1: RAM", "verdict": "Spare", "tested": true, "valueLow": 10, "valueHigh": 15, "attrs": {"memType": "DDR4", "memForm": "UDIMM", "capacityGB": 8, "speed": 2666}},
+  {"id": "shelf-ram-ddr3", "type": "RAM", "item": "Kingston 4GB DDR3-1600", "qty": 4, "use": "", "bin": "Box 1: RAM", "verdict": "Spare", "tested": false, "valueLow": 2, "valueHigh": 3, "notes": "Pulled from old office PCs.", "attrs": {"memType": "DDR3", "memForm": "UDIMM", "capacityGB": 4, "speed": 1600}},
+  {"id": "shelf-1050ti", "type": "GPU", "item": "NVIDIA GeForce GTX 1050 Ti", "use": "", "bin": "Shelf A", "verdict": "Keep", "tested": true, "specs": "4GB, low profile, no power connector", "valueLow": 60, "valueHigh": 80, "attrs": {"vramGB": 4, "lowProfile": true, "lengthMm": 168}},
+  {"id": "shelf-nvme", "type": "Storage", "item": "WD Blue SN570 500GB NVMe", "use": "", "bin": "Drawer", "verdict": "Spare", "tested": true, "valueLow": 25, "valueHigh": 35, "attrs": {"kind": "NVMe SSD", "formFactor": "M.2", "capacityGB": 500, "healthPct": 99}},
+  {"id": "shelf-hdd", "type": "Storage", "item": "Toshiba 3TB HDD", "model": "DT01ACA300", "qty": 2, "use": "", "bin": "Shelf A", "verdict": "Spare", "tested": false, "valueLow": 20, "valueHigh": 28, "attrs": {"kind": "HDD", "formFactor": "3.5\"", "capacityGB": 3000, "powerOnHours": 31000}},
+  {"id": "shelf-psu", "type": "Power", "item": "EVGA 550 BQ 550W", "use": "", "bin": "Shelf A", "verdict": "Spare", "tested": true, "specs": "80 Plus Bronze, semi-modular", "valueLow": 30, "valueHigh": 40, "attrs": {"watts": 550}},
+  {"id": "shelf-fans", "type": "Cooling", "item": "Arctic P12 120mm PWM fan", "qty": 6, "use": "", "bin": "Drawer", "verdict": "Keep", "tested": true, "valueLow": 5, "valueHigh": 7, "attrs": {}},
+  {"id": "shelf-nic", "type": "Network", "item": "Intel I350-T4 4-port Gigabit NIC", "use": "", "bin": "Shelf A", "verdict": "Keep", "tested": true, "specs": "PCIe x4, full-height and low-profile brackets", "valueLow": 25, "valueHigh": 35, "attrs": {"linkGbps": 1}},
+  {"id": "shelf-sata", "type": "Other", "item": "SATA data cables", "qty": 12, "use": "", "bin": "Drawer", "verdict": "Keep", "tested": true, "valueLow": 0, "valueHigh": 1, "attrs": {}},
+
+  {"id": "pho-uno", "type": "Dev Board", "item": "Arduino Uno", "use": "phobos", "verdict": "Keep", "tested": true, "valueLow": 15, "valueHigh": 25, "attrs": {"voltage": "5V"}},
+  {"id": "pho-soil", "type": "Module", "item": "Capacitive soil moisture sensor v1.2", "qty": 2, "use": "phobos", "verdict": "Keep", "tested": true, "valueLow": 2, "valueHigh": 4, "attrs": {"moduleKind": "Sensor", "iface": "Analog", "voltage": "3.3V–5V"}},
+  {"id": "shelf-launchpad", "type": "Dev Board", "item": "TI LaunchPad MSP-EXP430F5529LP", "use": "", "bin": "Box 3: Electronics", "verdict": "Keep", "tested": false, "valueLow": 10, "valueHigh": 15, "notes": "From a college course.", "attrs": {}},
+  {"id": "shelf-esp32", "type": "Dev Board", "item": "Espressif ESP32 Dev Module", "qty": 3, "use": "", "bin": "Box 3: Electronics", "verdict": "Keep", "tested": true, "valueLow": 5, "valueHigh": 8, "attrs": {}},
+  {"id": "shelf-pi4", "type": "SBC", "item": "Raspberry Pi 4 Model B 4GB", "use": "", "bin": "Shelf A", "verdict": "Keep", "tested": true, "valueLow": 35, "valueHigh": 45, "attrs": {}},
+  {"id": "shelf-bme", "type": "Module", "item": "BME280 temperature / humidity / pressure breakout", "qty": 2, "use": "", "bin": "Box 3: Electronics", "verdict": "Keep", "tested": false, "valueLow": 3, "valueHigh": 6, "attrs": {"vendor": "Generic", "mcu": "Bosch BME280", "moduleKind": "Sensor", "iface": "I2C", "voltage": "3.3V"}},
+  {"id": "sold-970", "type": "GPU", "item": "NVIDIA GeForce GTX 970", "use": "sold", "verdict": "Sell", "tested": true, "valueLow": 50, "valueHigh": 65, "purchase": {"price": 40, "date": "2024-01-08", "from": "Facebook Marketplace"}, "sale": {"price": 75, "date": "2024-03-30", "to": "eBay buyer"}, "attrs": {"vramGB": 4}},
+  {"id": "sold-4590", "type": "CPU", "item": "Intel Core i5-4590", "use": "sold", "verdict": "Sell", "tested": true, "valueLow": 10, "valueHigh": 15, "purchase": {"price": 5, "date": "2024-02-14", "from": "Local e-waste sale"}, "sale": {"price": 18, "date": "2024-05-02", "to": "Local pickup"}, "attrs": {}}
+ ],
+ "log": []
+}

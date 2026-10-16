@@ -1,0 +1,2137 @@
+{
+ "$comment": "Desktop CPUs for Parts Bin. Add or fix entries by pull request: keep keys lowercase, one entry per model. Specs are from manufacturer spec sheets; \"score\" is computed by the app from cores, threads, boost clock and architecture, never copied from a benchmark site.",
+ "cpus": [
+  {
+   "key": "g620",
+   "name": "Intel Pentium G620",
+   "socket": "LGA1155",
+   "arch": "Sandy Bridge",
+   "year": 2011,
+   "cores": 2,
+   "threads": 2,
+   "baseGHz": 2.6,
+   "boostGHz": 2.6,
+   "tdpW": 65,
+   "igpu": true,
+   "memTypes": [
+    "DDR3"
+   ]
+  },
+  {
+   "key": "g840",
+   "name": "Intel Pentium G840",
+   "socket": "LGA1155",
+   "arch": "Sandy Bridge",
+   "year": 2011,
+   "cores": 2,
+   "threads": 2,
+   "baseGHz": 2.8,
+   "boostGHz": 2.8,
+   "tdpW": 65,
+   "igpu": true,
+   "memTypes": [
+    "DDR3"
+   ]
+  },
+  {
+   "key": "i3-2100",
+   "name": "Intel Core i3-2100",
+   "socket": "LGA1155",
+   "arch": "Sandy Bridge",
+   "year": 2011,
+   "cores": 2,
+   "threads": 4,
+   "baseGHz": 3.1,
+   "boostGHz": 3.1,
+   "tdpW": 65,
+   "igpu": true,
+   "memTypes": [
+    "DDR3"
+   ]
+  },
+  {
+   "key": "i3-2120",
+   "name": "Intel Core i3-2120",
+   "socket": "LGA1155",
+   "arch": "Sandy Bridge",
+   "year": 2011,
+   "cores": 2,
+   "threads": 4,
+   "baseGHz": 3.3,
+   "boostGHz": 3.3,
+   "tdpW": 65,
+   "igpu": true,
+   "memTypes": [
+    "DDR3"
+   ]
+  },
+  {
+   "key": "i5-2400",
+   "name": "Intel Core i5-2400",
+   "socket": "LGA1155",
+   "arch": "Sandy Bridge",
+   "year": 2011,
+   "cores": 4,
+   "threads": 4,
+   "baseGHz": 3.1,
+   "boostGHz": 3.4,
+   "tdpW": 95,
+   "igpu": true,
+   "memTypes": [
+    "DDR3"
+   ]
+  },
+  {
+   "key": "i5-2500",
+   "name": "Intel Core i5-2500",
+   "socket": "LGA1155",
+   "arch": "Sandy Bridge",
+   "year": 2011,
+   "cores": 4,
+   "threads": 4,
+   "baseGHz": 3.3,
+   "boostGHz": 3.7,
+   "tdpW": 95,
+   "igpu": true,
+   "memTypes": [
+    "DDR3"
+   ]
+  },
+  {
+   "key": "i5-2500k",
+   "name": "Intel Core i5-2500K",
+   "socket": "LGA1155",
+   "arch": "Sandy Bridge",
+   "year": 2011,
+   "cores": 4,
+   "threads": 4,
+   "baseGHz": 3.3,
+   "boostGHz": 3.7,
+   "tdpW": 95,
+   "igpu": true,
+   "memTypes": [
+    "DDR3"
+   ]
+  },
+  {
+   "key": "i7-2600",
+   "name": "Intel Core i7-2600",
+   "socket": "LGA1155",
+   "arch": "Sandy Bridge",
+   "year": 2011,
+   "cores": 4,
+   "threads": 8,
+   "baseGHz": 3.4,
+   "boostGHz": 3.8,
+   "tdpW": 95,
+   "igpu": true,
+   "memTypes": [
+    "DDR3"
+   ]
+  },
+  {
+   "key": "i7-2600k",
+   "name": "Intel Core i7-2600K",
+   "socket": "LGA1155",
+   "arch": "Sandy Bridge",
+   "year": 2011,
+   "cores": 4,
+   "threads": 8,
+   "baseGHz": 3.4,
+   "boostGHz": 3.8,
+   "tdpW": 95,
+   "igpu": true,
+   "memTypes": [
+    "DDR3"
+   ]
+  },
+  {
+   "key": "g2020",
+   "name": "Intel Pentium G2020",
+   "socket": "LGA1155",
+   "arch": "Ivy Bridge",
+   "year": 2013,
+   "cores": 2,
+   "threads": 2,
+   "baseGHz": 2.9,
+   "boostGHz": 2.9,
+   "tdpW": 55,
+   "igpu": true,
+   "memTypes": [
+    "DDR3"
+   ]
+  },
+  {
+   "key": "g2130",
+   "name": "Intel Pentium G2130",
+   "socket": "LGA1155",
+   "arch": "Ivy Bridge",
+   "year": 2013,
+   "cores": 2,
+   "threads": 2,
+   "baseGHz": 3.2,
+   "boostGHz": 3.2,
+   "tdpW": 55,
+   "igpu": true,
+   "memTypes": [
+    "DDR3"
+   ]
+  },
+  {
+   "key": "i3-3220",
+   "name": "Intel Core i3-3220",
+   "socket": "LGA1155",
+   "arch": "Ivy Bridge",
+   "year": 2012,
+   "cores": 2,
+   "threads": 4,
+   "baseGHz": 3.3,
+   "boostGHz": 3.3,
+   "tdpW": 55,
+   "igpu": true,
+   "memTypes": [
+    "DDR3"
+   ]
+  },
+  {
+   "key": "i5-3470",
+   "name": "Intel Core i5-3470",
+   "socket": "LGA1155",
+   "arch": "Ivy Bridge",
+   "year": 2012,
+   "cores": 4,
+   "threads": 4,
+   "baseGHz": 3.2,
+   "boostGHz": 3.6,
+   "tdpW": 77,
+   "igpu": true,
+   "memTypes": [
+    "DDR3"
+   ]
+  },
+  {
+   "key": "i5-3570",
+   "name": "Intel Core i5-3570",
+   "socket": "LGA1155",
+   "arch": "Ivy Bridge",
+   "year": 2012,
+   "cores": 4,
+   "threads": 4,
+   "baseGHz": 3.4,
+   "boostGHz": 3.8,
+   "tdpW": 77,
+   "igpu": true,
+   "memTypes": [
+    "DDR3"
+   ]
+  },
+  {
+   "key": "i5-3570k",
+   "name": "Intel Core i5-3570K",
+   "socket": "LGA1155",
+   "arch": "Ivy Bridge",
+   "year": 2012,
+   "cores": 4,
+   "threads": 4,
+   "baseGHz": 3.4,
+   "boostGHz": 3.8,
+   "tdpW": 77,
+   "igpu": true,
+   "memTypes": [
+    "DDR3"
+   ]
+  },
+  {
+   "key": "i7-3770",
+   "name": "Intel Core i7-3770",
+   "socket": "LGA1155",
+   "arch": "Ivy Bridge",
+   "year": 2012,
+   "cores": 4,
+   "threads": 8,
+   "baseGHz": 3.4,
+   "boostGHz": 3.9,
+   "tdpW": 77,
+   "igpu": true,
+   "memTypes": [
+    "DDR3"
+   ]
+  },
+  {
+   "key": "i7-3770k",
+   "name": "Intel Core i7-3770K",
+   "socket": "LGA1155",
+   "arch": "Ivy Bridge",
+   "year": 2012,
+   "cores": 4,
+   "threads": 8,
+   "baseGHz": 3.5,
+   "boostGHz": 3.9,
+   "tdpW": 77,
+   "igpu": true,
+   "memTypes": [
+    "DDR3"
+   ]
+  },
+  {
+   "key": "g3220",
+   "name": "Intel Pentium G3220",
+   "socket": "LGA1150",
+   "arch": "Haswell",
+   "year": 2013,
+   "cores": 2,
+   "threads": 2,
+   "baseGHz": 3,
+   "boostGHz": 3,
+   "tdpW": 54,
+   "igpu": true,
+   "memTypes": [
+    "DDR3"
+   ]
+  },
+  {
+   "key": "g3258",
+   "name": "Intel Pentium G3258",
+   "socket": "LGA1150",
+   "arch": "Haswell",
+   "year": 2014,
+   "cores": 2,
+   "threads": 2,
+   "baseGHz": 3.2,
+   "boostGHz": 3.2,
+   "tdpW": 53,
+   "igpu": true,
+   "memTypes": [
+    "DDR3"
+   ]
+  },
+  {
+   "key": "i3-4130",
+   "name": "Intel Core i3-4130",
+   "socket": "LGA1150",
+   "arch": "Haswell",
+   "year": 2013,
+   "cores": 2,
+   "threads": 4,
+   "baseGHz": 3.4,
+   "boostGHz": 3.4,
+   "tdpW": 54,
+   "igpu": true,
+   "memTypes": [
+    "DDR3"
+   ]
+  },
+  {
+   "key": "i3-4160",
+   "name": "Intel Core i3-4160",
+   "socket": "LGA1150",
+   "arch": "Haswell",
+   "year": 2014,
+   "cores": 2,
+   "threads": 4,
+   "baseGHz": 3.6,
+   "boostGHz": 3.6,
+   "tdpW": 54,
+   "igpu": true,
+   "memTypes": [
+    "DDR3"
+   ]
+  },
+  {
+   "key": "i5-4460",
+   "name": "Intel Core i5-4460",
+   "socket": "LGA1150",
+   "arch": "Haswell",
+   "year": 2014,
+   "cores": 4,
+   "threads": 4,
+   "baseGHz": 3.2,
+   "boostGHz": 3.4,
+   "tdpW": 84,
+   "igpu": true,
+   "memTypes": [
+    "DDR3"
+   ]
+  },
+  {
+   "key": "i5-4570",
+   "name": "Intel Core i5-4570",
+   "socket": "LGA1150",
+   "arch": "Haswell",
+   "year": 2013,
+   "cores": 4,
+   "threads": 4,
+   "baseGHz": 3.2,
+   "boostGHz": 3.6,
+   "tdpW": 84,
+   "igpu": true,
+   "memTypes": [
+    "DDR3"
+   ]
+  },
+  {
+   "key": "i5-4590",
+   "name": "Intel Core i5-4590",
+   "socket": "LGA1150",
+   "arch": "Haswell",
+   "year": 2014,
+   "cores": 4,
+   "threads": 4,
+   "baseGHz": 3.3,
+   "boostGHz": 3.7,
+   "tdpW": 84,
+   "igpu": true,
+   "memTypes": [
+    "DDR3"
+   ]
+  },
+  {
+   "key": "i5-4670k",
+   "name": "Intel Core i5-4670K",
+   "socket": "LGA1150",
+   "arch": "Haswell",
+   "year": 2013,
+   "cores": 4,
+   "threads": 4,
+   "baseGHz": 3.4,
+   "boostGHz": 3.8,
+   "tdpW": 84,
+   "igpu": true,
+   "memTypes": [
+    "DDR3"
+   ]
+  },
+  {
+   "key": "i5-4690",
+   "name": "Intel Core i5-4690",
+   "socket": "LGA1150",
+   "arch": "Haswell",
+   "year": 2014,
+   "cores": 4,
+   "threads": 4,
+   "baseGHz": 3.5,
+   "boostGHz": 3.9,
+   "tdpW": 84,
+   "igpu": true,
+   "memTypes": [
+    "DDR3"
+   ]
+  },
+  {
+   "key": "i5-4690k",
+   "name": "Intel Core i5-4690K",
+   "socket": "LGA1150",
+   "arch": "Haswell",
+   "year": 2014,
+   "cores": 4,
+   "threads": 4,
+   "baseGHz": 3.5,
+   "boostGHz": 3.9,
+   "tdpW": 88,
+   "igpu": true,
+   "memTypes": [
+    "DDR3"
+   ]
+  },
+  {
+   "key": "i7-4770",
+   "name": "Intel Core i7-4770",
+   "socket": "LGA1150",
+   "arch": "Haswell",
+   "year": 2013,
+   "cores": 4,
+   "threads": 8,
+   "baseGHz": 3.4,
+   "boostGHz": 3.9,
+   "tdpW": 84,
+   "igpu": true,
+   "memTypes": [
+    "DDR3"
+   ]
+  },
+  {
+   "key": "i7-4770k",
+   "name": "Intel Core i7-4770K",
+   "socket": "LGA1150",
+   "arch": "Haswell",
+   "year": 2013,
+   "cores": 4,
+   "threads": 8,
+   "baseGHz": 3.5,
+   "boostGHz": 3.9,
+   "tdpW": 84,
+   "igpu": true,
+   "memTypes": [
+    "DDR3"
+   ]
+  },
+  {
+   "key": "i7-4790",
+   "name": "Intel Core i7-4790",
+   "socket": "LGA1150",
+   "arch": "Haswell",
+   "year": 2014,
+   "cores": 4,
+   "threads": 8,
+   "baseGHz": 3.6,
+   "boostGHz": 4,
+   "tdpW": 84,
+   "igpu": true,
+   "memTypes": [
+    "DDR3"
+   ]
+  },
+  {
+   "key": "i7-4790k",
+   "name": "Intel Core i7-4790K",
+   "socket": "LGA1150",
+   "arch": "Haswell",
+   "year": 2014,
+   "cores": 4,
+   "threads": 8,
+   "baseGHz": 4,
+   "boostGHz": 4.4,
+   "tdpW": 88,
+   "igpu": true,
+   "memTypes": [
+    "DDR3"
+   ]
+  },
+  {
+   "key": "g4400",
+   "name": "Intel Pentium G4400",
+   "socket": "LGA1151 (100/200)",
+   "arch": "Skylake",
+   "year": 2015,
+   "cores": 2,
+   "threads": 2,
+   "baseGHz": 3.3,
+   "boostGHz": 3.3,
+   "tdpW": 54,
+   "igpu": true,
+   "memTypes": [
+    "DDR3L",
+    "DDR4"
+   ]
+  },
+  {
+   "key": "g4560",
+   "name": "Intel Pentium G4560",
+   "socket": "LGA1151 (100/200)",
+   "arch": "Kaby Lake",
+   "year": 2017,
+   "cores": 2,
+   "threads": 4,
+   "baseGHz": 3.5,
+   "boostGHz": 3.5,
+   "tdpW": 54,
+   "igpu": true,
+   "memTypes": [
+    "DDR3L",
+    "DDR4"
+   ]
+  },
+  {
+   "key": "i3-6100",
+   "name": "Intel Core i3-6100",
+   "socket": "LGA1151 (100/200)",
+   "arch": "Skylake",
+   "year": 2015,
+   "cores": 2,
+   "threads": 4,
+   "baseGHz": 3.7,
+   "boostGHz": 3.7,
+   "tdpW": 51,
+   "igpu": true,
+   "memTypes": [
+    "DDR3L",
+    "DDR4"
+   ]
+  },
+  {
+   "key": "i5-6400",
+   "name": "Intel Core i5-6400",
+   "socket": "LGA1151 (100/200)",
+   "arch": "Skylake",
+   "year": 2015,
+   "cores": 4,
+   "threads": 4,
+   "baseGHz": 2.7,
+   "boostGHz": 3.3,
+   "tdpW": 65,
+   "igpu": true,
+   "memTypes": [
+    "DDR3L",
+    "DDR4"
+   ]
+  },
+  {
+   "key": "i5-6500",
+   "name": "Intel Core i5-6500",
+   "socket": "LGA1151 (100/200)",
+   "arch": "Skylake",
+   "year": 2015,
+   "cores": 4,
+   "threads": 4,
+   "baseGHz": 3.2,
+   "boostGHz": 3.6,
+   "tdpW": 65,
+   "igpu": true,
+   "memTypes": [
+    "DDR3L",
+    "DDR4"
+   ]
+  },
+  {
+   "key": "i5-6600",
+   "name": "Intel Core i5-6600",
+   "socket": "LGA1151 (100/200)",
+   "arch": "Skylake",
+   "year": 2015,
+   "cores": 4,
+   "threads": 4,
+   "baseGHz": 3.3,
+   "boostGHz": 3.9,
+   "tdpW": 65,
+   "igpu": true,
+   "memTypes": [
+    "DDR3L",
+    "DDR4"
+   ]
+  },
+  {
+   "key": "i5-6600k",
+   "name": "Intel Core i5-6600K",
+   "socket": "LGA1151 (100/200)",
+   "arch": "Skylake",
+   "year": 2015,
+   "cores": 4,
+   "threads": 4,
+   "baseGHz": 3.5,
+   "boostGHz": 3.9,
+   "tdpW": 91,
+   "igpu": true,
+   "memTypes": [
+    "DDR3L",
+    "DDR4"
+   ]
+  },
+  {
+   "key": "i7-6700",
+   "name": "Intel Core i7-6700",
+   "socket": "LGA1151 (100/200)",
+   "arch": "Skylake",
+   "year": 2015,
+   "cores": 4,
+   "threads": 8,
+   "baseGHz": 3.4,
+   "boostGHz": 4,
+   "tdpW": 65,
+   "igpu": true,
+   "memTypes": [
+    "DDR3L",
+    "DDR4"
+   ]
+  },
+  {
+   "key": "i7-6700k",
+   "name": "Intel Core i7-6700K",
+   "socket": "LGA1151 (100/200)",
+   "arch": "Skylake",
+   "year": 2015,
+   "cores": 4,
+   "threads": 8,
+   "baseGHz": 4,
+   "boostGHz": 4.2,
+   "tdpW": 91,
+   "igpu": true,
+   "memTypes": [
+    "DDR3L",
+    "DDR4"
+   ]
+  },
+  {
+   "key": "i3-7100",
+   "name": "Intel Core i3-7100",
+   "socket": "LGA1151 (100/200)",
+   "arch": "Kaby Lake",
+   "year": 2017,
+   "cores": 2,
+   "threads": 4,
+   "baseGHz": 3.9,
+   "boostGHz": 3.9,
+   "tdpW": 51,
+   "igpu": true,
+   "memTypes": [
+    "DDR3L",
+    "DDR4"
+   ]
+  },
+  {
+   "key": "i5-7400",
+   "name": "Intel Core i5-7400",
+   "socket": "LGA1151 (100/200)",
+   "arch": "Kaby Lake",
+   "year": 2017,
+   "cores": 4,
+   "threads": 4,
+   "baseGHz": 3,
+   "boostGHz": 3.5,
+   "tdpW": 65,
+   "igpu": true,
+   "memTypes": [
+    "DDR3L",
+    "DDR4"
+   ]
+  },
+  {
+   "key": "i5-7500",
+   "name": "Intel Core i5-7500",
+   "socket": "LGA1151 (100/200)",
+   "arch": "Kaby Lake",
+   "year": 2017,
+   "cores": 4,
+   "threads": 4,
+   "baseGHz": 3.4,
+   "boostGHz": 3.8,
+   "tdpW": 65,
+   "igpu": true,
+   "memTypes": [
+    "DDR3L",
+    "DDR4"
+   ]
+  },
+  {
+   "key": "i5-7600",
+   "name": "Intel Core i5-7600",
+   "socket": "LGA1151 (100/200)",
+   "arch": "Kaby Lake",
+   "year": 2017,
+   "cores": 4,
+   "threads": 4,
+   "baseGHz": 3.5,
+   "boostGHz": 4.1,
+   "tdpW": 65,
+   "igpu": true,
+   "memTypes": [
+    "DDR3L",
+    "DDR4"
+   ]
+  },
+  {
+   "key": "i5-7600k",
+   "name": "Intel Core i5-7600K",
+   "socket": "LGA1151 (100/200)",
+   "arch": "Kaby Lake",
+   "year": 2017,
+   "cores": 4,
+   "threads": 4,
+   "baseGHz": 3.8,
+   "boostGHz": 4.2,
+   "tdpW": 91,
+   "igpu": true,
+   "memTypes": [
+    "DDR3L",
+    "DDR4"
+   ]
+  },
+  {
+   "key": "i7-7700",
+   "name": "Intel Core i7-7700",
+   "socket": "LGA1151 (100/200)",
+   "arch": "Kaby Lake",
+   "year": 2017,
+   "cores": 4,
+   "threads": 8,
+   "baseGHz": 3.6,
+   "boostGHz": 4.2,
+   "tdpW": 65,
+   "igpu": true,
+   "memTypes": [
+    "DDR3L",
+    "DDR4"
+   ]
+  },
+  {
+   "key": "i7-7700k",
+   "name": "Intel Core i7-7700K",
+   "socket": "LGA1151 (100/200)",
+   "arch": "Kaby Lake",
+   "year": 2017,
+   "cores": 4,
+   "threads": 8,
+   "baseGHz": 4.2,
+   "boostGHz": 4.5,
+   "tdpW": 91,
+   "igpu": true,
+   "memTypes": [
+    "DDR3L",
+    "DDR4"
+   ]
+  },
+  {
+   "key": "g5400",
+   "name": "Intel Pentium Gold G5400",
+   "socket": "LGA1151 (300)",
+   "arch": "Coffee Lake",
+   "year": 2018,
+   "cores": 2,
+   "threads": 4,
+   "baseGHz": 3.7,
+   "boostGHz": 3.7,
+   "tdpW": 58,
+   "igpu": true,
+   "memTypes": [
+    "DDR4"
+   ]
+  },
+  {
+   "key": "i3-8100",
+   "name": "Intel Core i3-8100",
+   "socket": "LGA1151 (300)",
+   "arch": "Coffee Lake",
+   "year": 2017,
+   "cores": 4,
+   "threads": 4,
+   "baseGHz": 3.6,
+   "boostGHz": 3.6,
+   "tdpW": 65,
+   "igpu": true,
+   "memTypes": [
+    "DDR4"
+   ]
+  },
+  {
+   "key": "i5-8400",
+   "name": "Intel Core i5-8400",
+   "socket": "LGA1151 (300)",
+   "arch": "Coffee Lake",
+   "year": 2017,
+   "cores": 6,
+   "threads": 6,
+   "baseGHz": 2.8,
+   "boostGHz": 4,
+   "tdpW": 65,
+   "igpu": true,
+   "memTypes": [
+    "DDR4"
+   ]
+  },
+  {
+   "key": "i5-8500",
+   "name": "Intel Core i5-8500",
+   "socket": "LGA1151 (300)",
+   "arch": "Coffee Lake",
+   "year": 2018,
+   "cores": 6,
+   "threads": 6,
+   "baseGHz": 3,
+   "boostGHz": 4.1,
+   "tdpW": 65,
+   "igpu": true,
+   "memTypes": [
+    "DDR4"
+   ]
+  },
+  {
+   "key": "i5-8600k",
+   "name": "Intel Core i5-8600K",
+   "socket": "LGA1151 (300)",
+   "arch": "Coffee Lake",
+   "year": 2017,
+   "cores": 6,
+   "threads": 6,
+   "baseGHz": 3.6,
+   "boostGHz": 4.3,
+   "tdpW": 95,
+   "igpu": true,
+   "memTypes": [
+    "DDR4"
+   ]
+  },
+  {
+   "key": "i7-8700",
+   "name": "Intel Core i7-8700",
+   "socket": "LGA1151 (300)",
+   "arch": "Coffee Lake",
+   "year": 2017,
+   "cores": 6,
+   "threads": 12,
+   "baseGHz": 3.2,
+   "boostGHz": 4.6,
+   "tdpW": 65,
+   "igpu": true,
+   "memTypes": [
+    "DDR4"
+   ]
+  },
+  {
+   "key": "i7-8700k",
+   "name": "Intel Core i7-8700K",
+   "socket": "LGA1151 (300)",
+   "arch": "Coffee Lake",
+   "year": 2017,
+   "cores": 6,
+   "threads": 12,
+   "baseGHz": 3.7,
+   "boostGHz": 4.7,
+   "tdpW": 95,
+   "igpu": true,
+   "memTypes": [
+    "DDR4"
+   ]
+  },
+  {
+   "key": "i3-9100",
+   "name": "Intel Core i3-9100",
+   "socket": "LGA1151 (300)",
+   "arch": "Coffee Lake",
+   "year": 2019,
+   "cores": 4,
+   "threads": 4,
+   "baseGHz": 3.6,
+   "boostGHz": 4.2,
+   "tdpW": 65,
+   "igpu": true,
+   "memTypes": [
+    "DDR4"
+   ]
+  },
+  {
+   "key": "i5-9400",
+   "name": "Intel Core i5-9400",
+   "socket": "LGA1151 (300)",
+   "arch": "Coffee Lake",
+   "year": 2019,
+   "cores": 6,
+   "threads": 6,
+   "baseGHz": 2.9,
+   "boostGHz": 4.1,
+   "tdpW": 65,
+   "igpu": true,
+   "memTypes": [
+    "DDR4"
+   ]
+  },
+  {
+   "key": "i5-9500",
+   "name": "Intel Core i5-9500",
+   "socket": "LGA1151 (300)",
+   "arch": "Coffee Lake",
+   "year": 2019,
+   "cores": 6,
+   "threads": 6,
+   "baseGHz": 3,
+   "boostGHz": 4.4,
+   "tdpW": 65,
+   "igpu": true,
+   "memTypes": [
+    "DDR4"
+   ]
+  },
+  {
+   "key": "i5-9600k",
+   "name": "Intel Core i5-9600K",
+   "socket": "LGA1151 (300)",
+   "arch": "Coffee Lake",
+   "year": 2018,
+   "cores": 6,
+   "threads": 6,
+   "baseGHz": 3.7,
+   "boostGHz": 4.6,
+   "tdpW": 95,
+   "igpu": true,
+   "memTypes": [
+    "DDR4"
+   ]
+  },
+  {
+   "key": "i7-9700",
+   "name": "Intel Core i7-9700",
+   "socket": "LGA1151 (300)",
+   "arch": "Coffee Lake",
+   "year": 2019,
+   "cores": 8,
+   "threads": 8,
+   "baseGHz": 3,
+   "boostGHz": 4.7,
+   "tdpW": 65,
+   "igpu": true,
+   "memTypes": [
+    "DDR4"
+   ]
+  },
+  {
+   "key": "i7-9700k",
+   "name": "Intel Core i7-9700K",
+   "socket": "LGA1151 (300)",
+   "arch": "Coffee Lake",
+   "year": 2018,
+   "cores": 8,
+   "threads": 8,
+   "baseGHz": 3.6,
+   "boostGHz": 4.9,
+   "tdpW": 95,
+   "igpu": true,
+   "memTypes": [
+    "DDR4"
+   ]
+  },
+  {
+   "key": "i9-9900k",
+   "name": "Intel Core i9-9900K",
+   "socket": "LGA1151 (300)",
+   "arch": "Coffee Lake",
+   "year": 2018,
+   "cores": 8,
+   "threads": 16,
+   "baseGHz": 3.6,
+   "boostGHz": 5,
+   "tdpW": 95,
+   "igpu": true,
+   "memTypes": [
+    "DDR4"
+   ]
+  },
+  {
+   "key": "g6400",
+   "name": "Intel Pentium Gold G6400",
+   "socket": "LGA1200",
+   "arch": "Comet Lake",
+   "year": 2020,
+   "cores": 2,
+   "threads": 4,
+   "baseGHz": 4,
+   "boostGHz": 4,
+   "tdpW": 58,
+   "igpu": true,
+   "memTypes": [
+    "DDR4"
+   ]
+  },
+  {
+   "key": "i3-10100",
+   "name": "Intel Core i3-10100",
+   "socket": "LGA1200",
+   "arch": "Comet Lake",
+   "year": 2020,
+   "cores": 4,
+   "threads": 8,
+   "baseGHz": 3.6,
+   "boostGHz": 4.3,
+   "tdpW": 65,
+   "igpu": true,
+   "memTypes": [
+    "DDR4"
+   ]
+  },
+  {
+   "key": "i5-10400",
+   "name": "Intel Core i5-10400",
+   "socket": "LGA1200",
+   "arch": "Comet Lake",
+   "year": 2020,
+   "cores": 6,
+   "threads": 12,
+   "baseGHz": 2.9,
+   "boostGHz": 4.3,
+   "tdpW": 65,
+   "igpu": true,
+   "memTypes": [
+    "DDR4"
+   ]
+  },
+  {
+   "key": "i5-10500",
+   "name": "Intel Core i5-10500",
+   "socket": "LGA1200",
+   "arch": "Comet Lake",
+   "year": 2020,
+   "cores": 6,
+   "threads": 12,
+   "baseGHz": 3.1,
+   "boostGHz": 4.5,
+   "tdpW": 65,
+   "igpu": true,
+   "memTypes": [
+    "DDR4"
+   ]
+  },
+  {
+   "key": "i5-10600k",
+   "name": "Intel Core i5-10600K",
+   "socket": "LGA1200",
+   "arch": "Comet Lake",
+   "year": 2020,
+   "cores": 6,
+   "threads": 12,
+   "baseGHz": 4.1,
+   "boostGHz": 4.8,
+   "tdpW": 125,
+   "igpu": true,
+   "memTypes": [
+    "DDR4"
+   ]
+  },
+  {
+   "key": "i7-10700",
+   "name": "Intel Core i7-10700",
+   "socket": "LGA1200",
+   "arch": "Comet Lake",
+   "year": 2020,
+   "cores": 8,
+   "threads": 16,
+   "baseGHz": 2.9,
+   "boostGHz": 4.8,
+   "tdpW": 65,
+   "igpu": true,
+   "memTypes": [
+    "DDR4"
+   ]
+  },
+  {
+   "key": "i7-10700k",
+   "name": "Intel Core i7-10700K",
+   "socket": "LGA1200",
+   "arch": "Comet Lake",
+   "year": 2020,
+   "cores": 8,
+   "threads": 16,
+   "baseGHz": 3.8,
+   "boostGHz": 5.1,
+   "tdpW": 125,
+   "igpu": true,
+   "memTypes": [
+    "DDR4"
+   ]
+  },
+  {
+   "key": "i9-10900k",
+   "name": "Intel Core i9-10900K",
+   "socket": "LGA1200",
+   "arch": "Comet Lake",
+   "year": 2020,
+   "cores": 10,
+   "threads": 20,
+   "baseGHz": 3.7,
+   "boostGHz": 5.3,
+   "tdpW": 125,
+   "igpu": true,
+   "memTypes": [
+    "DDR4"
+   ]
+  },
+  {
+   "key": "i5-11400",
+   "name": "Intel Core i5-11400",
+   "socket": "LGA1200",
+   "arch": "Rocket Lake",
+   "year": 2021,
+   "cores": 6,
+   "threads": 12,
+   "baseGHz": 2.6,
+   "boostGHz": 4.4,
+   "tdpW": 65,
+   "igpu": true,
+   "memTypes": [
+    "DDR4"
+   ]
+  },
+  {
+   "key": "i5-11500",
+   "name": "Intel Core i5-11500",
+   "socket": "LGA1200",
+   "arch": "Rocket Lake",
+   "year": 2021,
+   "cores": 6,
+   "threads": 12,
+   "baseGHz": 2.7,
+   "boostGHz": 4.6,
+   "tdpW": 65,
+   "igpu": true,
+   "memTypes": [
+    "DDR4"
+   ]
+  },
+  {
+   "key": "i5-11600k",
+   "name": "Intel Core i5-11600K",
+   "socket": "LGA1200",
+   "arch": "Rocket Lake",
+   "year": 2021,
+   "cores": 6,
+   "threads": 12,
+   "baseGHz": 3.9,
+   "boostGHz": 4.9,
+   "tdpW": 125,
+   "igpu": true,
+   "memTypes": [
+    "DDR4"
+   ]
+  },
+  {
+   "key": "i7-11700",
+   "name": "Intel Core i7-11700",
+   "socket": "LGA1200",
+   "arch": "Rocket Lake",
+   "year": 2021,
+   "cores": 8,
+   "threads": 16,
+   "baseGHz": 2.5,
+   "boostGHz": 4.9,
+   "tdpW": 65,
+   "igpu": true,
+   "memTypes": [
+    "DDR4"
+   ]
+  },
+  {
+   "key": "i7-11700k",
+   "name": "Intel Core i7-11700K",
+   "socket": "LGA1200",
+   "arch": "Rocket Lake",
+   "year": 2021,
+   "cores": 8,
+   "threads": 16,
+   "baseGHz": 3.6,
+   "boostGHz": 5,
+   "tdpW": 125,
+   "igpu": true,
+   "memTypes": [
+    "DDR4"
+   ]
+  },
+  {
+   "key": "i9-11900k",
+   "name": "Intel Core i9-11900K",
+   "socket": "LGA1200",
+   "arch": "Rocket Lake",
+   "year": 2021,
+   "cores": 8,
+   "threads": 16,
+   "baseGHz": 3.5,
+   "boostGHz": 5.3,
+   "tdpW": 125,
+   "igpu": true,
+   "memTypes": [
+    "DDR4"
+   ]
+  },
+  {
+   "key": "i3-12100",
+   "name": "Intel Core i3-12100",
+   "socket": "LGA1700",
+   "arch": "Alder Lake",
+   "year": 2022,
+   "cores": 4,
+   "threads": 8,
+   "baseGHz": 3.3,
+   "boostGHz": 4.3,
+   "tdpW": 60,
+   "igpu": true,
+   "memTypes": [
+    "DDR4",
+    "DDR5"
+   ]
+  },
+  {
+   "key": "i5-12400",
+   "name": "Intel Core i5-12400",
+   "socket": "LGA1700",
+   "arch": "Alder Lake",
+   "year": 2022,
+   "cores": 6,
+   "threads": 12,
+   "baseGHz": 2.5,
+   "boostGHz": 4.4,
+   "tdpW": 65,
+   "igpu": true,
+   "memTypes": [
+    "DDR4",
+    "DDR5"
+   ]
+  },
+  {
+   "key": "i5-12500",
+   "name": "Intel Core i5-12500",
+   "socket": "LGA1700",
+   "arch": "Alder Lake",
+   "year": 2022,
+   "cores": 6,
+   "threads": 12,
+   "baseGHz": 3,
+   "boostGHz": 4.6,
+   "tdpW": 65,
+   "igpu": true,
+   "memTypes": [
+    "DDR4",
+    "DDR5"
+   ]
+  },
+  {
+   "key": "i5-12600k",
+   "name": "Intel Core i5-12600K",
+   "socket": "LGA1700",
+   "arch": "Alder Lake",
+   "year": 2021,
+   "cores": 10,
+   "threads": 16,
+   "baseGHz": 3.7,
+   "boostGHz": 4.9,
+   "tdpW": 125,
+   "igpu": true,
+   "memTypes": [
+    "DDR4",
+    "DDR5"
+   ],
+   "pCores": 6,
+   "eCores": 4
+  },
+  {
+   "key": "i7-12700",
+   "name": "Intel Core i7-12700",
+   "socket": "LGA1700",
+   "arch": "Alder Lake",
+   "year": 2022,
+   "cores": 12,
+   "threads": 20,
+   "baseGHz": 2.1,
+   "boostGHz": 4.9,
+   "tdpW": 65,
+   "igpu": true,
+   "memTypes": [
+    "DDR4",
+    "DDR5"
+   ],
+   "pCores": 8,
+   "eCores": 4
+  },
+  {
+   "key": "i7-12700k",
+   "name": "Intel Core i7-12700K",
+   "socket": "LGA1700",
+   "arch": "Alder Lake",
+   "year": 2021,
+   "cores": 12,
+   "threads": 20,
+   "baseGHz": 3.6,
+   "boostGHz": 5,
+   "tdpW": 125,
+   "igpu": true,
+   "memTypes": [
+    "DDR4",
+    "DDR5"
+   ],
+   "pCores": 8,
+   "eCores": 4
+  },
+  {
+   "key": "i9-12900k",
+   "name": "Intel Core i9-12900K",
+   "socket": "LGA1700",
+   "arch": "Alder Lake",
+   "year": 2021,
+   "cores": 16,
+   "threads": 24,
+   "baseGHz": 3.2,
+   "boostGHz": 5.2,
+   "tdpW": 125,
+   "igpu": true,
+   "memTypes": [
+    "DDR4",
+    "DDR5"
+   ],
+   "pCores": 8,
+   "eCores": 8
+  },
+  {
+   "key": "i3-13100",
+   "name": "Intel Core i3-13100",
+   "socket": "LGA1700",
+   "arch": "Raptor Lake",
+   "year": 2023,
+   "cores": 4,
+   "threads": 8,
+   "baseGHz": 3.4,
+   "boostGHz": 4.5,
+   "tdpW": 60,
+   "igpu": true,
+   "memTypes": [
+    "DDR4",
+    "DDR5"
+   ]
+  },
+  {
+   "key": "i5-13400",
+   "name": "Intel Core i5-13400",
+   "socket": "LGA1700",
+   "arch": "Raptor Lake",
+   "year": 2023,
+   "cores": 10,
+   "threads": 16,
+   "baseGHz": 2.5,
+   "boostGHz": 4.6,
+   "tdpW": 65,
+   "igpu": true,
+   "memTypes": [
+    "DDR4",
+    "DDR5"
+   ],
+   "pCores": 6,
+   "eCores": 4
+  },
+  {
+   "key": "i5-13500",
+   "name": "Intel Core i5-13500",
+   "socket": "LGA1700",
+   "arch": "Raptor Lake",
+   "year": 2023,
+   "cores": 14,
+   "threads": 20,
+   "baseGHz": 2.5,
+   "boostGHz": 4.8,
+   "tdpW": 65,
+   "igpu": true,
+   "memTypes": [
+    "DDR4",
+    "DDR5"
+   ],
+   "pCores": 6,
+   "eCores": 8
+  },
+  {
+   "key": "i5-13600k",
+   "name": "Intel Core i5-13600K",
+   "socket": "LGA1700",
+   "arch": "Raptor Lake",
+   "year": 2022,
+   "cores": 14,
+   "threads": 20,
+   "baseGHz": 3.5,
+   "boostGHz": 5.1,
+   "tdpW": 125,
+   "igpu": true,
+   "memTypes": [
+    "DDR4",
+    "DDR5"
+   ],
+   "pCores": 6,
+   "eCores": 8
+  },
+  {
+   "key": "i7-13700",
+   "name": "Intel Core i7-13700",
+   "socket": "LGA1700",
+   "arch": "Raptor Lake",
+   "year": 2023,
+   "cores": 16,
+   "threads": 24,
+   "baseGHz": 2.1,
+   "boostGHz": 5.2,
+   "tdpW": 65,
+   "igpu": true,
+   "memTypes": [
+    "DDR4",
+    "DDR5"
+   ],
+   "pCores": 8,
+   "eCores": 8
+  },
+  {
+   "key": "i7-13700k",
+   "name": "Intel Core i7-13700K",
+   "socket": "LGA1700",
+   "arch": "Raptor Lake",
+   "year": 2022,
+   "cores": 16,
+   "threads": 24,
+   "baseGHz": 3.4,
+   "boostGHz": 5.4,
+   "tdpW": 125,
+   "igpu": true,
+   "memTypes": [
+    "DDR4",
+    "DDR5"
+   ],
+   "pCores": 8,
+   "eCores": 8
+  },
+  {
+   "key": "i9-13900k",
+   "name": "Intel Core i9-13900K",
+   "socket": "LGA1700",
+   "arch": "Raptor Lake",
+   "year": 2022,
+   "cores": 24,
+   "threads": 32,
+   "baseGHz": 3,
+   "boostGHz": 5.8,
+   "tdpW": 125,
+   "igpu": true,
+   "memTypes": [
+    "DDR4",
+    "DDR5"
+   ],
+   "pCores": 8,
+   "eCores": 16
+  },
+  {
+   "key": "i5-14400",
+   "name": "Intel Core i5-14400",
+   "socket": "LGA1700",
+   "arch": "Raptor Lake",
+   "year": 2024,
+   "cores": 10,
+   "threads": 16,
+   "baseGHz": 2.5,
+   "boostGHz": 4.7,
+   "tdpW": 65,
+   "igpu": true,
+   "memTypes": [
+    "DDR4",
+    "DDR5"
+   ],
+   "pCores": 6,
+   "eCores": 4
+  },
+  {
+   "key": "i5-14600k",
+   "name": "Intel Core i5-14600K",
+   "socket": "LGA1700",
+   "arch": "Raptor Lake",
+   "year": 2023,
+   "cores": 14,
+   "threads": 20,
+   "baseGHz": 3.5,
+   "boostGHz": 5.3,
+   "tdpW": 125,
+   "igpu": true,
+   "memTypes": [
+    "DDR4",
+    "DDR5"
+   ],
+   "pCores": 6,
+   "eCores": 8
+  },
+  {
+   "key": "i7-14700k",
+   "name": "Intel Core i7-14700K",
+   "socket": "LGA1700",
+   "arch": "Raptor Lake",
+   "year": 2023,
+   "cores": 20,
+   "threads": 28,
+   "baseGHz": 3.4,
+   "boostGHz": 5.6,
+   "tdpW": 125,
+   "igpu": true,
+   "memTypes": [
+    "DDR4",
+    "DDR5"
+   ],
+   "pCores": 8,
+   "eCores": 12
+  },
+  {
+   "key": "i9-14900k",
+   "name": "Intel Core i9-14900K",
+   "socket": "LGA1700",
+   "arch": "Raptor Lake",
+   "year": 2023,
+   "cores": 24,
+   "threads": 32,
+   "baseGHz": 3.2,
+   "boostGHz": 6,
+   "tdpW": 125,
+   "igpu": true,
+   "memTypes": [
+    "DDR4",
+    "DDR5"
+   ],
+   "pCores": 8,
+   "eCores": 16
+  },
+  {
+   "key": "ultra5-245k",
+   "name": "Intel Core Ultra 5 245K",
+   "socket": "LGA1851",
+   "arch": "Arrow Lake",
+   "year": 2024,
+   "cores": 14,
+   "threads": 14,
+   "baseGHz": 4.2,
+   "boostGHz": 5.2,
+   "tdpW": 125,
+   "igpu": true,
+   "memTypes": [
+    "DDR5"
+   ],
+   "pCores": 6,
+   "eCores": 8
+  },
+  {
+   "key": "ultra7-265k",
+   "name": "Intel Core Ultra 7 265K",
+   "socket": "LGA1851",
+   "arch": "Arrow Lake",
+   "year": 2024,
+   "cores": 20,
+   "threads": 20,
+   "baseGHz": 3.9,
+   "boostGHz": 5.5,
+   "tdpW": 125,
+   "igpu": true,
+   "memTypes": [
+    "DDR5"
+   ],
+   "pCores": 8,
+   "eCores": 12
+  },
+  {
+   "key": "ultra9-285k",
+   "name": "Intel Core Ultra 9 285K",
+   "socket": "LGA1851",
+   "arch": "Arrow Lake",
+   "year": 2024,
+   "cores": 24,
+   "threads": 24,
+   "baseGHz": 3.7,
+   "boostGHz": 5.7,
+   "tdpW": 125,
+   "igpu": true,
+   "memTypes": [
+    "DDR5"
+   ],
+   "pCores": 8,
+   "eCores": 16
+  },
+  {
+   "key": "fx-6300",
+   "name": "AMD FX-6300",
+   "socket": "AM3+",
+   "arch": "Piledriver",
+   "year": 2012,
+   "cores": 6,
+   "threads": 6,
+   "baseGHz": 3.5,
+   "boostGHz": 4.1,
+   "tdpW": 95,
+   "igpu": false,
+   "memTypes": [
+    "DDR3"
+   ]
+  },
+  {
+   "key": "fx-8350",
+   "name": "AMD FX-8350",
+   "socket": "AM3+",
+   "arch": "Piledriver",
+   "year": 2012,
+   "cores": 8,
+   "threads": 8,
+   "baseGHz": 4,
+   "boostGHz": 4.2,
+   "tdpW": 125,
+   "igpu": false,
+   "memTypes": [
+    "DDR3"
+   ]
+  },
+  {
+   "key": "r3-1200",
+   "name": "AMD Ryzen 3 1200",
+   "socket": "AM4",
+   "arch": "Zen",
+   "year": 2017,
+   "cores": 4,
+   "threads": 4,
+   "baseGHz": 3.1,
+   "boostGHz": 3.4,
+   "tdpW": 65,
+   "igpu": false,
+   "memTypes": [
+    "DDR4"
+   ]
+  },
+  {
+   "key": "r5-1600",
+   "name": "AMD Ryzen 5 1600",
+   "socket": "AM4",
+   "arch": "Zen",
+   "year": 2017,
+   "cores": 6,
+   "threads": 12,
+   "baseGHz": 3.2,
+   "boostGHz": 3.6,
+   "tdpW": 65,
+   "igpu": false,
+   "memTypes": [
+    "DDR4"
+   ]
+  },
+  {
+   "key": "r7-1700",
+   "name": "AMD Ryzen 7 1700",
+   "socket": "AM4",
+   "arch": "Zen",
+   "year": 2017,
+   "cores": 8,
+   "threads": 16,
+   "baseGHz": 3,
+   "boostGHz": 3.7,
+   "tdpW": 65,
+   "igpu": false,
+   "memTypes": [
+    "DDR4"
+   ]
+  },
+  {
+   "key": "r7-1800x",
+   "name": "AMD Ryzen 7 1800X",
+   "socket": "AM4",
+   "arch": "Zen",
+   "year": 2017,
+   "cores": 8,
+   "threads": 16,
+   "baseGHz": 3.6,
+   "boostGHz": 4,
+   "tdpW": 95,
+   "igpu": false,
+   "memTypes": [
+    "DDR4"
+   ]
+  },
+  {
+   "key": "r5-2400g",
+   "name": "AMD Ryzen 5 2400G",
+   "socket": "AM4",
+   "arch": "Zen",
+   "year": 2018,
+   "cores": 4,
+   "threads": 8,
+   "baseGHz": 3.6,
+   "boostGHz": 3.9,
+   "tdpW": 65,
+   "igpu": true,
+   "memTypes": [
+    "DDR4"
+   ]
+  },
+  {
+   "key": "r5-2600",
+   "name": "AMD Ryzen 5 2600",
+   "socket": "AM4",
+   "arch": "Zen+",
+   "year": 2018,
+   "cores": 6,
+   "threads": 12,
+   "baseGHz": 3.4,
+   "boostGHz": 3.9,
+   "tdpW": 65,
+   "igpu": false,
+   "memTypes": [
+    "DDR4"
+   ]
+  },
+  {
+   "key": "r7-2700x",
+   "name": "AMD Ryzen 7 2700X",
+   "socket": "AM4",
+   "arch": "Zen+",
+   "year": 2018,
+   "cores": 8,
+   "threads": 16,
+   "baseGHz": 3.7,
+   "boostGHz": 4.3,
+   "tdpW": 105,
+   "igpu": false,
+   "memTypes": [
+    "DDR4"
+   ]
+  },
+  {
+   "key": "r5-3400g",
+   "name": "AMD Ryzen 5 3400G",
+   "socket": "AM4",
+   "arch": "Zen+",
+   "year": 2019,
+   "cores": 4,
+   "threads": 8,
+   "baseGHz": 3.7,
+   "boostGHz": 4.2,
+   "tdpW": 65,
+   "igpu": true,
+   "memTypes": [
+    "DDR4"
+   ]
+  },
+  {
+   "key": "r3-3100",
+   "name": "AMD Ryzen 3 3100",
+   "socket": "AM4",
+   "arch": "Zen 2",
+   "year": 2020,
+   "cores": 4,
+   "threads": 8,
+   "baseGHz": 3.6,
+   "boostGHz": 3.9,
+   "tdpW": 65,
+   "igpu": false,
+   "memTypes": [
+    "DDR4"
+   ]
+  },
+  {
+   "key": "r5-3600",
+   "name": "AMD Ryzen 5 3600",
+   "socket": "AM4",
+   "arch": "Zen 2",
+   "year": 2019,
+   "cores": 6,
+   "threads": 12,
+   "baseGHz": 3.6,
+   "boostGHz": 4.2,
+   "tdpW": 65,
+   "igpu": false,
+   "memTypes": [
+    "DDR4"
+   ]
+  },
+  {
+   "key": "r7-3700x",
+   "name": "AMD Ryzen 7 3700X",
+   "socket": "AM4",
+   "arch": "Zen 2",
+   "year": 2019,
+   "cores": 8,
+   "threads": 16,
+   "baseGHz": 3.6,
+   "boostGHz": 4.4,
+   "tdpW": 65,
+   "igpu": false,
+   "memTypes": [
+    "DDR4"
+   ]
+  },
+  {
+   "key": "r9-3900x",
+   "name": "AMD Ryzen 9 3900X",
+   "socket": "AM4",
+   "arch": "Zen 2",
+   "year": 2019,
+   "cores": 12,
+   "threads": 24,
+   "baseGHz": 3.8,
+   "boostGHz": 4.6,
+   "tdpW": 105,
+   "igpu": false,
+   "memTypes": [
+    "DDR4"
+   ]
+  },
+  {
+   "key": "r5-5500",
+   "name": "AMD Ryzen 5 5500",
+   "socket": "AM4",
+   "arch": "Zen 3",
+   "year": 2022,
+   "cores": 6,
+   "threads": 12,
+   "baseGHz": 3.6,
+   "boostGHz": 4.2,
+   "tdpW": 65,
+   "igpu": false,
+   "memTypes": [
+    "DDR4"
+   ]
+  },
+  {
+   "key": "r5-5600",
+   "name": "AMD Ryzen 5 5600",
+   "socket": "AM4",
+   "arch": "Zen 3",
+   "year": 2022,
+   "cores": 6,
+   "threads": 12,
+   "baseGHz": 3.5,
+   "boostGHz": 4.4,
+   "tdpW": 65,
+   "igpu": false,
+   "memTypes": [
+    "DDR4"
+   ]
+  },
+  {
+   "key": "r5-5600x",
+   "name": "AMD Ryzen 5 5600X",
+   "socket": "AM4",
+   "arch": "Zen 3",
+   "year": 2020,
+   "cores": 6,
+   "threads": 12,
+   "baseGHz": 3.7,
+   "boostGHz": 4.6,
+   "tdpW": 65,
+   "igpu": false,
+   "memTypes": [
+    "DDR4"
+   ]
+  },
+  {
+   "key": "r5-5600g",
+   "name": "AMD Ryzen 5 5600G",
+   "socket": "AM4",
+   "arch": "Zen 3",
+   "year": 2021,
+   "cores": 6,
+   "threads": 12,
+   "baseGHz": 3.9,
+   "boostGHz": 4.4,
+   "tdpW": 65,
+   "igpu": true,
+   "memTypes": [
+    "DDR4"
+   ]
+  },
+  {
+   "key": "r7-5700x",
+   "name": "AMD Ryzen 7 5700X",
+   "socket": "AM4",
+   "arch": "Zen 3",
+   "year": 2022,
+   "cores": 8,
+   "threads": 16,
+   "baseGHz": 3.4,
+   "boostGHz": 4.6,
+   "tdpW": 65,
+   "igpu": false,
+   "memTypes": [
+    "DDR4"
+   ]
+  },
+  {
+   "key": "r7-5800x",
+   "name": "AMD Ryzen 7 5800X",
+   "socket": "AM4",
+   "arch": "Zen 3",
+   "year": 2020,
+   "cores": 8,
+   "threads": 16,
+   "baseGHz": 3.8,
+   "boostGHz": 4.7,
+   "tdpW": 105,
+   "igpu": false,
+   "memTypes": [
+    "DDR4"
+   ]
+  },
+  {
+   "key": "r7-5800x3d",
+   "name": "AMD Ryzen 7 5800X3D",
+   "socket": "AM4",
+   "arch": "Zen 3",
+   "year": 2022,
+   "cores": 8,
+   "threads": 16,
+   "baseGHz": 3.4,
+   "boostGHz": 4.5,
+   "tdpW": 105,
+   "igpu": false,
+   "memTypes": [
+    "DDR4"
+   ]
+  },
+  {
+   "key": "r9-5900x",
+   "name": "AMD Ryzen 9 5900X",
+   "socket": "AM4",
+   "arch": "Zen 3",
+   "year": 2020,
+   "cores": 12,
+   "threads": 24,
+   "baseGHz": 3.7,
+   "boostGHz": 4.8,
+   "tdpW": 105,
+   "igpu": false,
+   "memTypes": [
+    "DDR4"
+   ]
+  },
+  {
+   "key": "r9-5950x",
+   "name": "AMD Ryzen 9 5950X",
+   "socket": "AM4",
+   "arch": "Zen 3",
+   "year": 2020,
+   "cores": 16,
+   "threads": 32,
+   "baseGHz": 3.4,
+   "boostGHz": 4.9,
+   "tdpW": 105,
+   "igpu": false,
+   "memTypes": [
+    "DDR4"
+   ]
+  },
+  {
+   "key": "r5-7600",
+   "name": "AMD Ryzen 5 7600",
+   "socket": "AM5",
+   "arch": "Zen 4",
+   "year": 2023,
+   "cores": 6,
+   "threads": 12,
+   "baseGHz": 3.8,
+   "boostGHz": 5.1,
+   "tdpW": 65,
+   "igpu": true,
+   "memTypes": [
+    "DDR5"
+   ]
+  },
+  {
+   "key": "r5-7600x",
+   "name": "AMD Ryzen 5 7600X",
+   "socket": "AM5",
+   "arch": "Zen 4",
+   "year": 2022,
+   "cores": 6,
+   "threads": 12,
+   "baseGHz": 4.7,
+   "boostGHz": 5.3,
+   "tdpW": 105,
+   "igpu": true,
+   "memTypes": [
+    "DDR5"
+   ]
+  },
+  {
+   "key": "r7-7700x",
+   "name": "AMD Ryzen 7 7700X",
+   "socket": "AM5",
+   "arch": "Zen 4",
+   "year": 2022,
+   "cores": 8,
+   "threads": 16,
+   "baseGHz": 4.5,
+   "boostGHz": 5.4,
+   "tdpW": 105,
+   "igpu": true,
+   "memTypes": [
+    "DDR5"
+   ]
+  },
+  {
+   "key": "r7-7800x3d",
+   "name": "AMD Ryzen 7 7800X3D",
+   "socket": "AM5",
+   "arch": "Zen 4",
+   "year": 2023,
+   "cores": 8,
+   "threads": 16,
+   "baseGHz": 4.2,
+   "boostGHz": 5,
+   "tdpW": 120,
+   "igpu": true,
+   "memTypes": [
+    "DDR5"
+   ]
+  },
+  {
+   "key": "r9-7900x",
+   "name": "AMD Ryzen 9 7900X",
+   "socket": "AM5",
+   "arch": "Zen 4",
+   "year": 2022,
+   "cores": 12,
+   "threads": 24,
+   "baseGHz": 4.7,
+   "boostGHz": 5.6,
+   "tdpW": 170,
+   "igpu": true,
+   "memTypes": [
+    "DDR5"
+   ]
+  },
+  {
+   "key": "r9-7950x",
+   "name": "AMD Ryzen 9 7950X",
+   "socket": "AM5",
+   "arch": "Zen 4",
+   "year": 2022,
+   "cores": 16,
+   "threads": 32,
+   "baseGHz": 4.5,
+   "boostGHz": 5.7,
+   "tdpW": 170,
+   "igpu": true,
+   "memTypes": [
+    "DDR5"
+   ]
+  },
+  {
+   "key": "r5-9600x",
+   "name": "AMD Ryzen 5 9600X",
+   "socket": "AM5",
+   "arch": "Zen 5",
+   "year": 2024,
+   "cores": 6,
+   "threads": 12,
+   "baseGHz": 3.9,
+   "boostGHz": 5.4,
+   "tdpW": 65,
+   "igpu": true,
+   "memTypes": [
+    "DDR5"
+   ]
+  },
+  {
+   "key": "r7-9700x",
+   "name": "AMD Ryzen 7 9700X",
+   "socket": "AM5",
+   "arch": "Zen 5",
+   "year": 2024,
+   "cores": 8,
+   "threads": 16,
+   "baseGHz": 3.8,
+   "boostGHz": 5.5,
+   "tdpW": 65,
+   "igpu": true,
+   "memTypes": [
+    "DDR5"
+   ]
+  },
+  {
+   "key": "r7-9800x3d",
+   "name": "AMD Ryzen 7 9800X3D",
+   "socket": "AM5",
+   "arch": "Zen 5",
+   "year": 2024,
+   "cores": 8,
+   "threads": 16,
+   "baseGHz": 4.7,
+   "boostGHz": 5.2,
+   "tdpW": 120,
+   "igpu": true,
+   "memTypes": [
+    "DDR5"
+   ]
+  },
+  {
+   "key": "r9-9950x",
+   "name": "AMD Ryzen 9 9950X",
+   "socket": "AM5",
+   "arch": "Zen 5",
+   "year": 2024,
+   "cores": 16,
+   "threads": 32,
+   "baseGHz": 4.3,
+   "boostGHz": 5.7,
+   "tdpW": 170,
+   "igpu": true,
+   "memTypes": [
+    "DDR5"
+   ]
+  }
+ ]
+}

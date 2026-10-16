@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data: blob: pbin:; media-src 'self' blob: mediastream:; script-src 'self'">
+<title>Parts Bin</title>
+<link rel="stylesheet" href="../node_modules/@fontsource/pixelify-sans/500.css">
+<link rel="stylesheet" href="../node_modules/@fontsource/pixelify-sans/600.css">
+<link rel="stylesheet" href="../node_modules/@fontsource/pixelify-sans/700.css">
+<link rel="stylesheet" href="../node_modules/@fontsource/atkinson-hyperlegible/400.css">
+<link rel="stylesheet" href="../node_modules/@fontsource/atkinson-hyperlegible/700.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top" id="top">
+  <div class="plate brand">
+    <img class="spr" id="logo" width="48" height="48" alt="">
+    <div>
+      <h1>Parts Bin</h1>
+      <div class="strap" id="strap"></div>
+    </div>
+  </div>
+  <nav class="tabs" id="tabs" role="tablist" aria-label="Views">
+    <button role="tab" data-view="inventory" aria-selected="true">Inventory</button>
+    <button role="tab" data-view="builds" aria-selected="false">Builds</button>
+    <button role="tab" data-view="optimizer" aria-selected="false">Optimizer <span class="count" id="optCount"></span></button>
+  </nav>
+  <span class="spacer"></span>
+  <div class="hgroup">
+    <button class="btn small" id="undoBtn" title="Undo (Ctrl+Z)" disabled>↶ Undo</button>
+    <button class="btn small" id="redoBtn" title="Redo (Ctrl+Y)" disabled>Redo ↷</button>
+    <span class="saved" id="saved" role="status"><span class="dot"></span>loading…</span>
+    <button class="btn icon-btn" id="camBtn" title="Scan a label with the camera"><img class="spr" data-sprite="camera" width="36" height="36" alt="Scan a label"></button>
+    <button class="btn icon-btn" id="settingsBtn" title="Settings"><img class="spr" data-sprite="wrench" width="36" height="36" alt="Settings"></button>
+    <button class="btn icon-btn" id="themeBtn" title="Day / night"><img class="spr" id="themeIcon" width="36" height="36" alt="Toggle day or night theme"></button>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+  <!-- INVENTORY -->
+  <section id="view-inventory" class="view">
+    <div class="tiles" id="invTiles"></div>
+    <div class="toolbar">
+      <label class="search">
+        <img class="spr" data-sprite="search" width="36" height="36" alt="">
+        <span class="sr">Search</span>
+        <input id="q" type="search" placeholder="Search parts, models, specs, notes, bins…   ( / )" autocomplete="off" spellcheck="false">
+      </label>
+      <div class="seg" id="fStatus" role="group" aria-label="Status">
+        <button class="btn small" data-v="all" aria-pressed="true">All</button>
+        <button class="btn small" data-v="available" aria-pressed="false">Available</button>
+        <button class="btn small" data-v="inuse" aria-pressed="false">In use</button>
+        <button class="btn small" data-v="sold" aria-pressed="false">Sold</button>
+      </div>
+      <select id="fBin" aria-label="Storage location"></select>
+      <select id="fVerdict" aria-label="Verdict"><option value="">Any verdict</option><option>Keep</option><option>Spare</option><option>Sell</option></select>
+      <select id="fTested" aria-label="Tested"><option value="">Tested or not</option><option value="yes">Tested</option><option value="no">Untested</option></select>
+      <select id="fSort" aria-label="Sort">
+        <option value="added">Sort: date added</option><option value="type">Sort: type</option><option value="name">Sort: name</option>
+        <option value="value">Sort: value</option><option value="age">Sort: age (oldest first)</option><option value="bin">Sort: storage location</option>
+      </select>
+      <span class="spacer"></span>
+      <button class="btn primary" id="addPart">+ Add part</button>
+    </div>
+    <div class="chips" id="fType" role="group" aria-label="Part type"></div>
+    <div class="panel flush">
+      <div class="table-wrap">
+        <table class="grid" id="invTable">
+          <thead><tr><th><span class="sr">Icon</span></th><th>Part</th><th>Status</th><th>Verdict</th><th class="num">Age</th><th class="num">Est. value</th><th>Tested</th><th>Notes</th></tr></thead>
+          <tbody id="invRows"></tbody>
+        </table>
+      </div>
+    </div>
+    <p class="foot" id="invFoot"></p>
+  </section>
+
+  <!-- BUILDS -->
+  <section id="view-builds" class="view" hidden>
+    <div class="toolbar">
+      <button class="btn primary" id="scanPC"><img class="spr" data-sprite="System" width="24" height="24" alt=""> Scan this PC</button>
+      <button class="btn" id="pasteReport"><img class="spr" data-sprite="tag" width="24" height="24" alt=""> Paste a hardware report</button>
+      <span class="sub">Each machine gets a planet or moon: name it Titan, Europa, Mars… to choose its world. Reports: <b>inxi -Fxz</b> (Linux) or a <b>CPU-Z</b> text report (Windows).</span>
+    </div>
+    <div class="builds" id="builds"></div>
+  </section>
+
+  <!-- OPTIMIZER -->
+  <section id="view-optimizer" class="view" hidden>
+    <div class="panel intro">
+      <img class="spr" data-sprite="rocket" width="72" height="72" alt="">
+      <div>
+        <h2>Upgrade optimizer</h2>
+        <p>Checks every build against the parts marked <b>Available</b> (never ones marked <b>Sell</b>, sold, or in use elsewhere) and lists only changes that are compatible and measurably better: more RAM or dual channel, a faster CPU on the same socket, an SSD where there's none, capacity for free slots, a faster GPU that fits the case and the power supply. "Worth buying" lists upgrades you don't have parts for yet.</p>
+      </div>
+    </div>
+    <div class="stack" id="optimizer"></div>
+  </section>
+</main>
+
+<footer class="bottom">
+  <span id="dataPath"></span>
+  <span class="spacer"></span>
+  <button class="btn small" id="labelsBtn"><img class="spr" data-sprite="tag" width="24" height="24" alt=""> Print labels</button>
+  <button class="btn small" id="reportBtn">PDF report</button>
+  <button class="btn small" id="trashBtn"><img class="spr" data-sprite="trash" width="24" height="24" alt=""> Trash <span id="trashCount"></span></button>
+  <button class="btn small" id="dataBtn">Data &amp; backups</button>
+</footer>
+
+<!-- part editor -->
+<dialog id="partDlg" aria-labelledby="partTitle">
+  <form method="dialog" id="partForm" class="dlg">
+    <header><img class="spr" id="partIcon" width="36" height="36" alt=""><h2 id="partTitle">Part</h2><button type="button" class="x" data-close aria-label="Close">✕</button></header>
+    <div class="form-grid">
+      <label>Type<select name="type" id="pType"></select></label>
+      <label class="wide">Name<input name="itemName" required placeholder="e.g. Intel Core i5-9500" list="dbNames"></label>
+      <label>Model / part no.<input name="model"></label>
+      <label class="wide">Specs<input name="specs" placeholder="short spec line"></label>
+      <label>Quantity<input name="qty" type="number" min="1" step="1"></label>
+      <label>Storage location<input name="bin" list="binList" placeholder="e.g. Box 2: CPUs"></label>
+      <label>Manufactured<input name="mfgDate" type="date"></label>
+      <label>Verdict<select name="verdict"><option>Keep</option><option>Spare</option><option>Sell</option></select></label>
+      <label>Status<select name="use" id="pUse"></select></label>
+      <label class="wide" id="pLocWrap">Where it's in use<input name="useNote" placeholder="e.g. HP 280 Pro G8 cold spare"></label>
+      <label class="check"><input type="checkbox" name="tested"> Tested and working</label>
+    </div>
+    <p class="dbhit" id="dbHit" hidden></p>
+    <fieldset class="attrs" id="pAttrs"><legend>Details the optimizer uses</legend><div class="form-grid" id="pAttrGrid"></div></fieldset>
+    <fieldset class="attrs"><legend>Money</legend>
+      <div class="form-grid">
+        <label>Value low<input name="valueLow" type="number" min="0" step="any"></label>
+        <label>Value high<input name="valueHigh" type="number" min="0" step="any"></label>
+        <label>Paid<input name="paid" type="number" min="0" step="any"></label>
+        <label>Bought on<input name="boughtOn" type="date"></label>
+        <label class="wide">Bought from<input name="boughtFrom" placeholder="store, seller, e-waste pile…"></label>
+        <label>Warranty until<input name="warrantyUntil" type="date"></label>
+        <span></span>
+        <label>Sold for<input name="soldFor" type="number" min="0" step="any"></label>
+        <label>Sold on<input name="soldOn" type="date"></label>
+        <label class="wide">Sold to<input name="soldTo"></label>
+      </div>
+      <p class="sub money-note"><button type="button" class="btn small" id="ebayBtn">Check eBay sold prices ↗</button> Opens eBay's sold listings for this part in your browser.</p>
+    </fieldset>
+    <fieldset class="attrs"><legend>Photos</legend>
+      <div class="photos" id="pPhotos"></div>
+      <button type="button" class="btn small" id="addPhotos">+ Add photos</button>
+    </fieldset>
+    <fieldset class="attrs"><legend>Test log</legend>
+      <ul class="tests" id="pTests"></ul>
+      <div class="test-add">
+        <input type="date" id="tDate" aria-label="Test date">
+        <select id="tResult" aria-label="Result"><option value="pass">Passed</option><option value="fail">Failed</option></select>
+        <input id="tNote" placeholder="what you ran (MemTest86, SMART long test, Prime95…)" aria-label="Test note">
+        <button type="button" class="btn small" id="tAdd">Log test</button>
+      </div>
+    </fieldset>
+    <label class="block">Notes<textarea name="notes" rows="3"></textarea></label>
+    <footer>
+      <button type="button" class="btn danger" id="pDelete">Move to trash</button>
+      <button type="button" class="btn" id="pDup">Duplicate</button>
+      <button type="button" class="btn" id="pLabel"><img class="spr" data-sprite="tag" width="24" height="24" alt=""> Label</button>
+      <span class="spacer"></span>
+      <button type="button" class="btn" data-close>Cancel</button>
+      <button type="submit" class="btn go" value="save">Save</button>
+    </footer>
+  </form>
+</dialog>
+<datalist id="binList"></datalist>
+<datalist id="worldList"></datalist>
+<datalist id="dbNames"></datalist>
+<datalist id="archList"></datalist>
+
+<!-- build editor -->
+<dialog id="buildDlg" aria-labelledby="buildTitle">
+  <form method="dialog" id="buildForm" class="dlg">
+    <header><img class="spr" id="buildIcon" width="40" height="40" alt=""><h2 id="buildTitle">Build</h2><button type="button" class="x" data-close aria-label="Close">✕</button></header>
+    <div class="form-grid">
+      <label>Name<input name="name" required list="worldList" autocomplete="off"></label>
+      <label>Kind<select name="kind" id="bKind"><option value="computer">Computer</option><option value="project">Electronics project</option></select></label>
+      <label class="wide">Role<input name="role" placeholder="e.g. NAS / Jellyfin media server"></label>
+      <label>IP<input name="ip"></label>
+      <label>OS<input name="os"></label>
+    </div>
+    <div class="world-row">
+      <img class="spr" id="bWorldImg" width="96" height="96" alt="">
+      <div>
+        <p id="bWorld"></p>
+        <p class="sub">Every machine gets its own planet. Name it after a planet or moon (Mercury, Titan, Europa, Phobos, Pluto…) and it gets that world's look; any other name gets a planet chosen from the name. Name ideas you haven't used yet:</p>
+        <div class="chips" id="bIdeas"></div>
+      </div>
+    </div>
+    <fieldset class="attrs" id="bPlatform"><legend>Platform (what the board and case support)</legend>
+      <div class="form-grid">
+        <label>CPU socket<select name="socket" id="bSocket"></select></label>
+        <label>RAM type<select name="memType"><option value="">Unknown</option><option>DDR3</option><option>DDR3L</option><option>DDR4</option><option>DDR5</option></select></label>
+        <label>RAM form<select name="memForm"><option>UDIMM</option><option>SODIMM</option></select></label>
+        <label>RAM slots<input name="ramSlots" type="number" min="0" max="16"></label>
+        <label>Max RAM (GB)<input name="maxRamGB" type="number" min="0"></label>
+        <label>M.2 slots<input name="m2Slots" type="number" min="0" max="8"></label>
+        <label>SATA ports<input name="sataPorts" type="number" min="0" max="16"></label>
+        <label>Free PCIe slots<input name="pcieFree" type="number" min="0" max="8"></label>
+        <label>Max GPU length (mm)<input name="maxGpuLengthMm" type="number" min="0"></label>
+        <label>PSU watts (if not a part)<input name="psuW" type="number" min="0"></label>
+        <label class="check"><input type="checkbox" name="lowProfileOnly"> Low-profile cards only (SFF case)</label>
+      </div>
+    </fieldset>
+    <label class="block">Notes<textarea name="notes" rows="3"></textarea></label>
+    <footer>
+      <button type="button" class="btn danger" id="bDelete">Delete build</button>
+      <span class="spacer"></span>
+      <button type="button" class="btn" data-close>Cancel</button>
+      <button type="submit" class="btn go" value="save">Save</button>
+    </footer>
+  </form>
+</dialog>
+
+<!-- add a part to a build -->
+<dialog id="pickDlg" aria-labelledby="pickTitle">
+  <div class="dlg">
+    <header><img class="spr" id="pickIcon" width="40" height="40" alt=""><h2 id="pickTitle">Add to build</h2><button type="button" class="x" data-close aria-label="Close">✕</button></header>
+    <input id="pickQ" type="search" placeholder="Search available parts…" autocomplete="off" aria-label="Search available parts">
+    <ul class="picklist" id="pickList"></ul>
+    <footer>
+      <span class="sub">Only parts marked Available are listed. Compatibility uses the build's platform details.</span>
+      <span class="spacer"></span>
+      <button type="button" class="btn primary" id="pickNew">+ New part in this build</button>
+    </footer>
+  </div>
+</dialog>
+
+<!-- build history -->
+<dialog id="histDlg" aria-labelledby="histTitle">
+  <div class="dlg">
+    <header><img class="spr" data-sprite="clock" width="36" height="36" alt=""><h2 id="histTitle">History</h2><button type="button" class="x" data-close aria-label="Close">✕</button></header>
+    <div class="test-add"><input id="histNote" placeholder="Add a note, e.g. reseated the GPU, replaced thermal paste" aria-label="History note"><button type="button" class="btn small" id="histAdd">Add note</button></div>
+    <ul class="history" id="histList"></ul>
+  </div>
+</dialog>
+
+<!-- paste / open a hardware report -->
+<dialog id="pasteDlg" aria-labelledby="pasteTitle">
+  <div class="dlg">
+    <header><img class="spr" data-sprite="tag" width="36" height="36" alt=""><h2 id="pasteTitle">Paste a hardware report</h2><button type="button" class="x" data-close aria-label="Close">✕</button></header>
+    <p class="sub">On Linux run <code>inxi -Fxz</code> (install with <code>sudo apt install inxi</code>) and paste the output. On Windows, CPU-Z → Tools → Save Report as .TXT, then open it here. A model name in any text works too.</p>
+    <textarea id="pasteText" rows="14" spellcheck="false" aria-label="Report text"></textarea>
+    <footer>
+      <button type="button" class="btn" id="pasteFile">Open a file…</button>
+      <span class="spacer"></span>
+      <button type="button" class="btn" data-close>Cancel</button>
+      <button type="button" class="btn go" id="pasteRead">Read report</button>
+    </footer>
+  </div>
+</dialog>
+
+<!-- review an import -->
+<dialog id="importDlg" aria-labelledby="importTitle">
+  <div class="dlg">
+    <header><img class="spr" data-sprite="System" width="36" height="36" alt=""><h2 id="importTitle">Review import</h2><button type="button" class="x" data-close aria-label="Close">✕</button></header>
+    <div class="form-grid">
+      <label class="wide">Add to<select id="impTarget"></select></label>
+      <label class="wide" id="impNameWrap">New build name<input id="impName"></label>
+    </div>
+    <p class="sub"><span id="impSummary"></span> Untick anything you don't want. Platform details (socket, RAM type, slots) are filled in where the report had them.</p>
+    <ul class="picklist" id="impList"></ul>
+    <footer>
+      <span class="spacer"></span>
+      <button type="button" class="btn" data-close>Cancel</button>
+      <button type="button" class="btn go" id="impGo">Add parts</button>
+    </footer>
+  </div>
+</dialog>
+
+<!-- welcome / first run -->
+<dialog id="welcomeDlg" aria-labelledby="welcomeTitle">
+  <div class="dlg">
+    <header><img class="spr" data-sprite="logo" width="40" height="40" alt=""><h2 id="welcomeTitle">Welcome to Parts Bin</h2></header>
+    <p>Keep track of every part on the shelf and in your machines, see what's in use, and let the optimizer tell you when a spare would make a build better. Each machine gets its own planet or moon, picked from its name. Everything stays on this computer.</p>
+    <div class="choices">
+      <button type="button" class="choice" data-start="scan"><img class="spr" data-sprite="System" width="48" height="48" alt=""><b>Scan this PC</b><span>Adds this computer as your first build, parts and all.</span></button>
+      <button type="button" class="choice" data-start="paste"><img class="spr" data-sprite="tag" width="48" height="48" alt=""><b>Paste a hardware report</b><span>From inxi (Linux) or CPU-Z (Windows), for another machine.</span></button>
+      <button type="button" class="choice" data-start="sample"><img class="spr" data-sprite="logo" width="48" height="48" alt=""><b>Try the sample homelab</b><span>Three made-up machines and a shelf of spares to play with.</span></button>
+      <button type="button" class="choice" data-start="import"><img class="spr" data-sprite="Storage" width="48" height="48" alt=""><b>Import a file</b><span>A Parts Bin backup (JSON) or a spreadsheet (CSV).</span></button>
+      <button type="button" class="choice" data-start="empty"><img class="spr" data-sprite="Case" width="48" height="48" alt=""><b>Start empty</b><span>Add builds and parts by hand.</span></button>
+    </div>
+  </div>
+</dialog>
+
+<!-- settings -->
+<dialog id="setDlg" aria-labelledby="setTitle">
+  <div class="dlg">
+    <header><img class="spr" data-sprite="wrench" width="36" height="36" alt=""><h2 id="setTitle">Settings</h2><button type="button" class="x" data-close aria-label="Close">✕</button></header>
+    <div class="form-grid">
+      <label>Theme<select id="sTheme"><option value="light">Day</option><option value="dark">Night</option></select></label>
+      <label>Text size<select id="sScale"><option value="0.9">90%</option><option value="1">100%</option><option value="1.15">115%</option><option value="1.3">130%</option><option value="1.5">150%</option></select></label>
+      <label>Currency symbol<input id="sCurrency" maxlength="4"></label>
+      <label class="check"><input type="checkbox" id="sMotion"> Reduce motion</label>
+      <label class="check wide"><input type="checkbox" id="sUpdate"> Check for updates when the app starts</label>
+      <span class="wide"><button type="button" class="btn small" id="sCheck">Check for updates now</button> <span class="sub" id="sUpdateMsg"></span></span>
+    </div>
+    <fieldset class="attrs"><legend>Keyboard</legend>
+      <p class="keys"><kbd>/</kbd> or <kbd>Ctrl F</kbd> search · <kbd>Ctrl N</kbd> new part · <kbd>Ctrl Z</kbd> undo · <kbd>Ctrl Y</kbd> redo · <kbd>1</kbd> <kbd>2</kbd> <kbd>3</kbd> switch views · <kbd>Esc</kbd> close or clear</p>
+    </fieldset>
+    <fieldset class="attrs"><legend>My boards</legend>
+      <p class="sub">Boards, single-board computers and modules you added with “Not here?”. The built-in list has <span id="sBoardCount"></span> boards from PlatformIO.</p>
+      <ul class="myboards" id="sMyBoards"></ul>
+    </fieldset>
+    <fieldset class="attrs"><legend>About</legend>
+      <p id="sAbout"></p>
+      <p class="sub">Open source under the MIT license. No accounts, no telemetry: your data never leaves this computer unless you export it.</p>
+      <button type="button" class="btn small" id="sWelcome">Show the welcome screen</button>
+    </fieldset>
+  </div>
+</dialog>
+
+<!-- data & backups -->
+<dialog id="dataDlg" aria-labelledby="dataTitle">
+  <div class="dlg">
+    <header><img class="spr" data-sprite="Storage" width="36" height="36" alt=""><h2 id="dataTitle">Data &amp; backups</h2><button type="button" class="x" data-close aria-label="Close">✕</button></header>
+    <div class="actions">
+      <button type="button" class="btn" id="dExportJSON">Export backup (JSON)</button>
+      <button type="button" class="btn" id="dImportJSON">Import backup (JSON)</button>
+      <button type="button" class="btn" id="dExportCSV">Export spreadsheet (CSV)</button>
+      <button type="button" class="btn" id="dImportCSV">Import spreadsheet (CSV)</button>
+      <button type="button" class="btn" id="dSample">Add the sample homelab</button>
+      <button type="button" class="btn" id="dFolder">Open data folder</button>
+    </div>
+    <p class="sub">Every change saves instantly. A snapshot is kept every 10 minutes of editing (newest 40). Restoring keeps a snapshot of the current state first, so it can be undone.</p>
+    <ul class="picklist" id="backupList"></ul>
+  </div>
+</dialog>
+
+<!-- trash -->
+<dialog id="trashDlg" aria-labelledby="trashTitle">
+  <div class="dlg">
+    <header><img class="spr" data-sprite="trash" width="36" height="36" alt=""><h2 id="trashTitle">Trash</h2><button type="button" class="x" data-close aria-label="Close">✕</button></header>
+    <p class="sub">Deleted parts stay here for 30 days.</p>
+    <ul class="picklist" id="trashList"></ul>
+    <footer><span class="spacer"></span><button type="button" class="btn danger" id="trashEmpty">Empty trash</button></footer>
+  </div>
+</dialog>
+
+<!-- labels -->
+<dialog id="labelDlg" aria-labelledby="labelTitle">
+  <div class="dlg">
+    <header><img class="spr" data-sprite="tag" width="36" height="36" alt=""><h2 id="labelTitle">Print labels</h2><button type="button" class="x" data-close aria-label="Close">✕</button></header>
+    <div class="form-grid">
+      <label class="wide">Labels for<select id="lSource"></select></label>
+      <label class="wide">Sheet<select id="lSheet"><option value="5160">Avery 5160 / 8160 (1 × 2⅝ in, 30 per sheet)</option><option value="5163">Avery 5163 / 8163 (2 × 4 in, 10 per sheet)</option></select></label>
+    </div>
+    <p class="sub">Each label has a QR code. Point the camera button in the header at it to jump straight to that part or bin.</p>
+    <div class="label-preview" id="lPreview"></div>
+    <footer>
+      <span class="sub" id="lCount"></span><span class="spacer"></span>
+      <button type="button" class="btn" id="lPdf">Save PDF</button>
+      <button type="button" class="btn go" id="lPrint">Print…</button>
+    </footer>
+  </div>
+</dialog>
+
+<!-- camera label scanner -->
+<dialog id="camDlg" aria-labelledby="camTitle">
+  <div class="dlg">
+    <header><img class="spr" data-sprite="camera" width="36" height="36" alt=""><h2 id="camTitle">Scan a label</h2><button type="button" class="x" data-close aria-label="Close">✕</button></header>
+    <video id="camVideo" playsinline muted></video>
+    <p class="sub" id="camMsg">Hold a Parts Bin label up to the camera.</p>
+  </div>
+</dialog>
+
+<div id="print" aria-hidden="true"></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="../node_modules/jsqr/dist/jsQR.js"></script>
+<script src="pixel.js"></script>
+<script src="partsdb.js"></script>
+<script src="model.js"></script>
+<script src="importers.js"></script>
+<script src="optimizer.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

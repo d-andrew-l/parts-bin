@@ -1,0 +1,50 @@
+System:
+  Kernel: 6.12.111+deb13-amd64 arch: x86_64 bits: 64 compiler: gcc v: 14.2.0
+  Console: tty 1 Distro: Debian GNU/Linux 13 (trixie)
+Machine:
+  Type: Desktop System: HP product: HP ProDesk 400 G7 Small Form Factor PC v: SBKPFV3
+    serial: <superuser required>
+  Mobo: HP model: 8719 v: KBC Version 09.08.26 serial: <superuser required> UEFI: HP
+    v: S08 Ver. 02.25.00 date: 01/12/2026
+CPU:
+  Info: 6-core model: Intel Core i5-10500 bits: 64 type: MT MCP arch: Comet Lake rev: 3 cache:
+    L1: 384 KiB L2: 1.5 MiB L3: 12 MiB
+  Speed (MHz): avg: 800 min/max: 800/4500 cores: 1: 800 2: 800 3: 800 4: 800 5: 800 6: 800
+    7: 800 8: 800 9: 800 10: 800 11: 800 12: 800 bogomips: 74399
+  Flags: avx avx2 ht lm nx pae sse sse2 sse3 sse4_1 sse4_2 ssse3 vmx
+Graphics:
+  Device-1: Intel CometLake-S GT2 [UHD Graphics 630] vendor: Hewlett-Packard driver: i915
+    v: kernel arch: Gen-9.5 bus-ID: 00:02.0
+  Display: unspecified server: X.org v: 1.21.1.16 with: Xwayland v: 24.1.6 driver: gpu: i915
+    tty: 210x65 resolution: 1680x1050
+  API: EGL v: 1.5 drivers: iris,swrast platforms: active: gbm,surfaceless,device
+    inactive: wayland,x11
+  API: OpenGL v: 4.6 compat-v: 4.5 vendor: mesa v: 25.0.7-2+deb13u1 note: console (EGL sourced)
+    renderer: Mesa Intel UHD Graphics 630 (CML GT2), llvmpipe (LLVM 19.1.7 256 bits)
+  Info: Tools: api: eglinfo,glxinfo x11: xdriinfo, xdpyinfo, xprop, xrandr
+Audio:
+  Device-1: Intel Comet Lake PCH cAVS vendor: Hewlett-Packard driver: snd_hda_intel v: kernel
+    bus-ID: 00:1f.3
+  API: ALSA v: k6.12.111+deb13-amd64 status: kernel-api
+  Server-1: PipeWire v: 1.4.2 status: active
+Network:
+  Device-1: Intel Ethernet I219-LM vendor: Hewlett-Packard driver: e1000e v: kernel port: N/A
+    bus-ID: 00:1f.6
+  IF: eno1 state: up speed: 1000 Mbps duplex: full mac: <filter>
+Drives:
+  Local Storage: total: 238.47 GiB used: 9.3 GiB (3.9%)
+  ID-1: /dev/nvme0n1 vendor: Western Digital model: PC SN730 SDBPNTY-256G-1006 size: 238.47 GiB
+    temp: 25.9 C
+Partition:
+  ID-1: / size: 16.81 GiB used: 7.24 GiB (43.1%) fs: ext4 dev: /dev/nvme0n1p2
+  ID-2: /boot/efi size: 974.1 MiB used: 9 MiB (0.9%) fs: vfat dev: /dev/nvme0n1p1
+  ID-3: /var size: 6.7 GiB used: 1.28 GiB (19.0%) fs: ext4 dev: /dev/nvme0n1p3
+Swap:
+  ID-1: swap-1 type: partition size: 977 MiB used: 0 KiB (0.0%) dev: /dev/nvme0n1p4
+Sensors:
+  System Temperatures: cpu: 26.0 C pch: 30.0 C mobo: N/A
+  Fan Speeds (rpm): N/A
+Info:
+  Memory: total: 8 GiB note: est. available: 7.54 GiB used: 966 MiB (12.5%)
+  Processes: 235 Uptime: 11d 7h 39m Init: systemd
+  Packages: 1691 Compilers: gcc: 14.2.0 Shell: Bash v: 5.2.37 inxi: 3.3.38

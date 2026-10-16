@@ -1,0 +1,11 @@
+node_modules/
+dist/
+*.log
+.DS_Store
+Thumbs.db
+# never commit real inventories, photos or scans
+data/
+user-data/
+inventory*.json
+scan-*.json
+!test/fixtures/scan-workbench.json

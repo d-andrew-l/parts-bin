@@ -1,0 +1,365 @@
+{
+ "$comment": "Desktop graphics cards for Parts Bin. Add or fix entries by pull request: keep keys lowercase, one entry per model. \"perf\" is a rough relative index (higher is faster) for comparing cards; \"power\" is the reference-card PCIe power connector.",
+ "gpus": [
+  {
+   "key": "gt710",
+   "name": "NVIDIA GeForce GT 710",
+   "vramGB": 2,
+   "tdpW": 19,
+   "power": "none",
+   "perf": 3,
+   "year": 2014
+  },
+  {
+   "key": "gt1030",
+   "name": "NVIDIA GeForce GT 1030",
+   "vramGB": 2,
+   "tdpW": 30,
+   "power": "none",
+   "perf": 11,
+   "year": 2017
+  },
+  {
+   "key": "gtx750ti",
+   "name": "NVIDIA GeForce GTX 750 Ti",
+   "vramGB": 2,
+   "tdpW": 60,
+   "power": "none",
+   "perf": 15,
+   "year": 2014
+  },
+  {
+   "key": "gtx950",
+   "name": "NVIDIA GeForce GTX 950",
+   "vramGB": 2,
+   "tdpW": 90,
+   "power": "6-pin",
+   "perf": 24,
+   "year": 2015
+  },
+  {
+   "key": "gtx960",
+   "name": "NVIDIA GeForce GTX 960",
+   "vramGB": 2,
+   "tdpW": 120,
+   "power": "6-pin",
+   "perf": 27,
+   "year": 2015
+  },
+  {
+   "key": "gtx970",
+   "name": "NVIDIA GeForce GTX 970",
+   "vramGB": 4,
+   "tdpW": 145,
+   "power": "6+6-pin",
+   "perf": 37,
+   "year": 2014
+  },
+  {
+   "key": "gtx1050ti",
+   "name": "NVIDIA GeForce GTX 1050 Ti",
+   "vramGB": 4,
+   "tdpW": 75,
+   "power": "none",
+   "perf": 24,
+   "year": 2016
+  },
+  {
+   "key": "gtx1060",
+   "name": "NVIDIA GeForce GTX 1060",
+   "vramGB": 6,
+   "tdpW": 120,
+   "power": "6-pin",
+   "perf": 42,
+   "year": 2016
+  },
+  {
+   "key": "gtx1070",
+   "name": "NVIDIA GeForce GTX 1070",
+   "vramGB": 8,
+   "tdpW": 150,
+   "power": "8-pin",
+   "perf": 60,
+   "year": 2016
+  },
+  {
+   "key": "gtx1080",
+   "name": "NVIDIA GeForce GTX 1080",
+   "vramGB": 8,
+   "tdpW": 180,
+   "power": "8-pin",
+   "perf": 73,
+   "year": 2016
+  },
+  {
+   "key": "gtx1080ti",
+   "name": "NVIDIA GeForce GTX 1080 Ti",
+   "vramGB": 11,
+   "tdpW": 250,
+   "power": "6+8-pin",
+   "perf": 96,
+   "year": 2017
+  },
+  {
+   "key": "gtx1650",
+   "name": "NVIDIA GeForce GTX 1650",
+   "vramGB": 4,
+   "tdpW": 75,
+   "power": "none",
+   "perf": 35,
+   "year": 2019
+  },
+  {
+   "key": "gtx1660super",
+   "name": "NVIDIA GeForce GTX 1660 Super",
+   "vramGB": 6,
+   "tdpW": 125,
+   "power": "8-pin",
+   "perf": 58,
+   "year": 2019
+  },
+  {
+   "key": "rtx2060",
+   "name": "NVIDIA GeForce RTX 2060",
+   "vramGB": 6,
+   "tdpW": 160,
+   "power": "8-pin",
+   "perf": 74,
+   "year": 2019
+  },
+  {
+   "key": "rtx2070",
+   "name": "NVIDIA GeForce RTX 2070",
+   "vramGB": 8,
+   "tdpW": 175,
+   "power": "8-pin",
+   "perf": 89,
+   "year": 2018
+  },
+  {
+   "key": "rtx2080",
+   "name": "NVIDIA GeForce RTX 2080",
+   "vramGB": 8,
+   "tdpW": 215,
+   "power": "6+8-pin",
+   "perf": 109,
+   "year": 2018
+  },
+  {
+   "key": "rtx3050",
+   "name": "NVIDIA GeForce RTX 3050",
+   "vramGB": 8,
+   "tdpW": 130,
+   "power": "8-pin",
+   "perf": 62,
+   "year": 2022
+  },
+  {
+   "key": "rtx3060",
+   "name": "NVIDIA GeForce RTX 3060",
+   "vramGB": 12,
+   "tdpW": 170,
+   "power": "8-pin",
+   "perf": 87,
+   "year": 2021
+  },
+  {
+   "key": "rtx3060ti",
+   "name": "NVIDIA GeForce RTX 3060 Ti",
+   "vramGB": 8,
+   "tdpW": 200,
+   "power": "8-pin",
+   "perf": 116,
+   "year": 2020
+  },
+  {
+   "key": "rtx3070",
+   "name": "NVIDIA GeForce RTX 3070",
+   "vramGB": 8,
+   "tdpW": 220,
+   "power": "8+8-pin",
+   "perf": 135,
+   "year": 2020
+  },
+  {
+   "key": "rtx3080",
+   "name": "NVIDIA GeForce RTX 3080",
+   "vramGB": 10,
+   "tdpW": 320,
+   "power": "8+8-pin",
+   "perf": 175,
+   "year": 2020
+  },
+  {
+   "key": "rtx4060",
+   "name": "NVIDIA GeForce RTX 4060",
+   "vramGB": 8,
+   "tdpW": 115,
+   "power": "8-pin",
+   "perf": 106,
+   "year": 2023
+  },
+  {
+   "key": "rtx4060ti",
+   "name": "NVIDIA GeForce RTX 4060 Ti",
+   "vramGB": 8,
+   "tdpW": 160,
+   "power": "8-pin",
+   "perf": 135,
+   "year": 2023
+  },
+  {
+   "key": "rtx4070",
+   "name": "NVIDIA GeForce RTX 4070",
+   "vramGB": 12,
+   "tdpW": 200,
+   "power": "8-pin or 16-pin",
+   "perf": 178,
+   "year": 2023
+  },
+  {
+   "key": "rtx4070super",
+   "name": "NVIDIA GeForce RTX 4070 Super",
+   "vramGB": 12,
+   "tdpW": 220,
+   "power": "16-pin",
+   "perf": 208,
+   "year": 2024
+  },
+  {
+   "key": "rtx4080",
+   "name": "NVIDIA GeForce RTX 4080",
+   "vramGB": 16,
+   "tdpW": 320,
+   "power": "16-pin",
+   "perf": 280,
+   "year": 2022
+  },
+  {
+   "key": "rtx4090",
+   "name": "NVIDIA GeForce RTX 4090",
+   "vramGB": 24,
+   "tdpW": 450,
+   "power": "16-pin",
+   "perf": 360,
+   "year": 2022
+  },
+  {
+   "key": "rx570",
+   "name": "AMD Radeon RX 570",
+   "vramGB": 4,
+   "tdpW": 150,
+   "power": "8-pin",
+   "perf": 39,
+   "year": 2017
+  },
+  {
+   "key": "rx580",
+   "name": "AMD Radeon RX 580",
+   "vramGB": 8,
+   "tdpW": 185,
+   "power": "8-pin",
+   "perf": 44,
+   "year": 2017
+  },
+  {
+   "key": "rx5600xt",
+   "name": "AMD Radeon RX 5600 XT",
+   "vramGB": 6,
+   "tdpW": 150,
+   "power": "8-pin",
+   "perf": 78,
+   "year": 2020
+  },
+  {
+   "key": "rx5700xt",
+   "name": "AMD Radeon RX 5700 XT",
+   "vramGB": 8,
+   "tdpW": 225,
+   "power": "6+8-pin",
+   "perf": 92,
+   "year": 2019
+  },
+  {
+   "key": "rx6600",
+   "name": "AMD Radeon RX 6600",
+   "vramGB": 8,
+   "tdpW": 132,
+   "power": "8-pin",
+   "perf": 80,
+   "year": 2021
+  },
+  {
+   "key": "rx6600xt",
+   "name": "AMD Radeon RX 6600 XT",
+   "vramGB": 8,
+   "tdpW": 160,
+   "power": "8-pin",
+   "perf": 98,
+   "year": 2021
+  },
+  {
+   "key": "rx6700xt",
+   "name": "AMD Radeon RX 6700 XT",
+   "vramGB": 12,
+   "tdpW": 230,
+   "power": "6+8-pin",
+   "perf": 125,
+   "year": 2021
+  },
+  {
+   "key": "rx6800",
+   "name": "AMD Radeon RX 6800",
+   "vramGB": 16,
+   "tdpW": 250,
+   "power": "8+8-pin",
+   "perf": 165,
+   "year": 2020
+  },
+  {
+   "key": "rx7600",
+   "name": "AMD Radeon RX 7600",
+   "vramGB": 8,
+   "tdpW": 165,
+   "power": "8-pin",
+   "perf": 108,
+   "year": 2023
+  },
+  {
+   "key": "rx7800xt",
+   "name": "AMD Radeon RX 7800 XT",
+   "vramGB": 16,
+   "tdpW": 263,
+   "power": "8+8-pin",
+   "perf": 198,
+   "year": 2023
+  },
+  {
+   "key": "arca380",
+   "name": "Intel Arc A380",
+   "vramGB": 6,
+   "tdpW": 75,
+   "power": "none or 8-pin",
+   "perf": 40,
+   "year": 2022
+  },
+  {
+   "key": "arca750",
+   "name": "Intel Arc A750",
+   "vramGB": 8,
+   "tdpW": 225,
+   "power": "6+8-pin",
+   "perf": 130,
+   "year": 2022
+  },
+  {
+   "key": "arcb580",
+   "name": "Intel Arc B580",
+   "vramGB": 12,
+   "tdpW": 190,
+   "power": "8-pin",
+   "perf": 148,
+   "year": 2024
+  }
+ ]
+}
